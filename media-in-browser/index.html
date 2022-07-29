@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+		body {
+			margin: 0;
+			font-family: 'Work Sans', sans-serif;
+			font-weight: 100;
+			text-align: center;
+			color: white;
+			background-color: rgb(49, 49, 49);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+		}
+	
+		a {
+			color: orange;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 20px;
+		}
+        video {
+            height: 500px;
+        }
+    </style>
+    <title>Video</title>
+</head>
+<body>
+    <main>
+        <video src="/g4o2-website//media/2022-06-09 18-39-50.mp4" muted loop controls autoplay></video>
+        <audio id="audio" src="/g4o2-website/media/1.mp3#t=01:00" type="audio/mp3" controls></audio><br>
+        <a href="../index.html">Go back to main page</a>
+		<script>
+			let audio = document.getElementById("audio");
+			function setHalfVolume() {
+				audio.volume = 0.2;
+			} 
+			setHalfVolume();
+		</script>
+	<main>
+</body>
+</html>

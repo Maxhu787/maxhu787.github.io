@@ -1,0 +1,15 @@
+/* Creating and Using Variables */
+
+$fonts: 'Poppins', Helvertica, sans-serif;
+$primary-color: #ab99ca;
+$spacing: 2rem;
+
+body {
+    font-family: $fonts;
+    background-color: $primary-color;
+    padding: $spacing;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

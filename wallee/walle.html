@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallee</title>
+</head>
+
+<body>
+
+    <script>
+        var x = window.prompt("Do you like cake? [Yes/No]");
+        if (x == "yes" || x == "y") {
+            document.write(`<a href="yes.html"><p>y</p></a>`);
+            //document.getElementById("main").innerHTML = "y"
+        } else if (x == "no" || x == "n") {
+            document.write(`<a href="no.html"><p>n</p></a>`);
+            //document.getElementById("divMsg").innerHTML = "n"
+        } else {
+            document.write(`<a href="trolling.html"><p>stop trolling</p></a>`);
+            //document.getElementById("divMsg").innerHTML = "stop trolling"
+        }
+    </script>
+</body>
+
+</html>
+<style>
+    body {
+        background-color: grey;
+        text-align: center;
+        font-family: monospace;
+        font-size: 50px;
+        animation-name: anim2;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
+    p {
+        color: orange;
+        animation-name: anim;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        margin-top: 200px;
+    }
+    a {
+        color: #444;
+		text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    @keyframes anim {
+        0% {
+            color: orange;
+            transform: rotate(72deg);
+        }
+
+        25% {
+            color: green;
+            font-size: 80px;
+            transform: rotate(-72deg);
+        }
+
+        50% {
+            color: yellow;
+            font-size: 50px;
+            transform: rotate(72deg);
+        }
+
+        75% {
+            color: lightblue;
+            font-size: 80px;
+            transform: rotate(-72deg);
+        }
+
+        100% {
+            color: lightgrey;
+            font-size: 50px;
+            transform: rotate(72deg);
+        }
+    }
+    @keyframes anim2 {
+        0% {
+            background-color: blue;
+        }
+        25% {
+            background-color: grey;
+        }
+        50% {
+            background-color: purple;
+        }
+        75% {
+            background-color: orange;
+        }
+        100% {
+            background-color: green;
+        }
+    }

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+    
+        body {
+            margin: 0;
+            background: black;
+            font-family: 'Work Sans';
+            font-weight: 100;
+            text-align: center;
+            color: white;
+        }
+    
+        a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            margin-top: 100px;
+        }
+    
+        a:hover {
+            color: orange;
+        }
+        table {
+            margin-left: 45%;
+            margin-top: 10px;
+        }
+        </style>
+    <title>Tables</title>
+</head>
+<body>
+    <main>
+        <header>block elements</header>
+        <table border="10">
+            <caption>Test</caption>
+            <tr>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+            </tr>
+            <tr>
+                <td rowspan="2">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table>
+        <figure>
+            <img src="/g4o2-website/media/0000002.jpg" alt="dubai" style="width:100%">
+            <figcaption>dubai</figcaption>
+        </figure>
+        <hr>
+        <address>
+            Written by <a href="mailto:maxhu787@gmail.com">g4o2/Maxhu</a>.<br>
+            Visit us at:<br>
+            g4o2-website.com<br>
+            rieriuj, ergoeijrg<br>
+            ewfwef
+        </address>
+        <hr>
+        <p>Here is a quote from g4o2 website:</p>
+        
+        <blockquote cite="g4o2-website">
+           bruh quote
+        </blockquote>
+        <hr>
+        <details>
+            <summary>More info</summary>
+            <p>This page is only for testing different tags</p>
+        </details>
+        <br><header>inline elements</header>
+        <p><cite>Website</cite> by g4o2. Created in 2022.</p>
+        <hr>
+        <p><abbr title="Laugh my ass off">lmao</abbr></p>
+        <hr>
+        <p><time datetime="2008-02-07">My birthday</time></p>
+        <p>From <time>10:00</time> to <time>21:00</time> everyday</p>
+        <p><samp>File not found.</samp><br><samp>Press F1 to countinue</samp></p>
+        <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the
+            vertical height.</p>
+        <p>This line countains <sub>subscript</sub> text</p>
+        <p>This lien countains <sup>superscript</sup> text</p>
+        <p>The <code>background-color</code> property sets the background color</p>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text on Windows</p>
+        <p>Press <kbd>Cmd</kbd> + <kbd>C</kbd> to copy text on Mac</p>
+        <hr>
+        <label for="disk-c">Disk C:\\ usage</label>
+        <meter id="disk-c" value="2" min="0" max="10">2 out of 10</meter>
+        <label for="disk-d">Disk D:\\ usage</label>
+        <meter id="disk-d" value="0.6">60%</meter>
+        <hr>
+        <label for="file">Download progress:</label>
+        <progress id="file" value="32" max="100">32%</progress>
+        <hr>
+        <iframe src="https://freecodecamp.org" title="freecodecamp"></iframe>
+        <p><bdo dir="rtl">This text will go right to left</bdo></p>
+        <hr>
+        <img src="/g4o2-website/media/0000001.jpg" height="500px" usemap="map">
+        <map name="map">
+            <area shape="rect" coords="0,0, 0,0, 0,0, 0,0" alt="test" href="../index.html">
+        </map>
+        <br>
+        <p id="hover-stat"></p>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        <div id="badge-1" data-iframe-width="150" data-iframe-height="270"
+            data-share-badge-id="0ebeaaeb-fbed-4794-b9e9-43cee08484bf" data-share-badge-host="https://www.credly.com"></div>
+        <a href="../index.html">Go back to main page</a><br>
+    </main>
+    <script>
+        hoverText = document.getElementById('hover-stat');
+        window.onscroll = function () {
+                hoverText.innerHTML = Math.round(window.pageYOffset);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three js</title>
+    <style>
+        body {
+            margin: 0
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/g4o2-website/threejs/three.js"></script>
+    <script type="module" src="/g4o2-website/threejs/GLTFLoader.js"></script>
+    <script type="module" src="/g4o2-website/threejs/RGBELoader.js"></script>
+    <script type="module">
+        import { OrbitControls } from '/g4o2-website/threejs/OrbitControls.js';
+        import { GLTFLoader } from "/g4o2-website/threejs/GLTFLoader.js";
+        import { RGBELoader } from "/g4o2-website/threejs/RGBELoader.js";
+
+
+        let scene = new THREE.Scene();
+        let camera = new THREE.PerspectiveCamera(
+            75,
+            innerWidth / innerHeight,
+            0.01,
+            1000
+        );
+
+        let renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement)
+        const controls = new OrbitControls(camera, renderer.domElement);
+        let loader = new GLTFLoader();
+        var obj;
+
+        loader.load("/g4o2-website/threejs/x/scene.gltf", function (gltf) {
+            scene.add(gltf.scene);
+            obj = gltf.scene;
+        })
+
+        //scene.background = new THREE.Color(0x000000)
+        let ambientLight = new THREE.AmbientLight(0x00ff00, 10)
+        scene.add(ambientLight)
+
+        let directionalLight = new THREE.DirectionalLight(0xff1100, 8)
+        directionalLight.position.set(10, 10, 10)
+        scene.add(directionalLight)
+        let backLight = new THREE.DirectionalLight(0xffffff, 1)
+        backLight.position.set(10, 500, 10)
+        scene.add(backLight)
+        let secondLight = new THREE.DirectionalLight(0xffffff, 1)
+        secondLight.position.set(0, -5, 0)
+        scene.add(secondLight)
+
+        
+        let hemisphereLight = new THREE.HemisphereLight(0x0000ff, 0xffc200, 10);
+        scene.add(hemisphereLight)
+        camera.position.set(0, 180, 130)
+        function animate() {
+            requestAnimationFrame(animate)
+            obj.rotation.y += 0.01
+            renderer.render(scene, camera)
+        }
+        animate()
+        console.log(loader)
+    </script>
+</body>
+
+</html>

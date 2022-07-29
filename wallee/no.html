@@ -1,0 +1,71 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+    body {
+        margin: 0;
+        background: #ffa200;
+        font-family: 'Work Sans', sans-serif;
+        font-weight: 100;
+        text-align: center;
+        color: grey;
+    }
+
+    a {
+        color: #444;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: 100px;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    header {
+        font-size: 50px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .rect {
+        height: 50px;
+        width: 0%;
+        background-color: white;
+        border-radius: 10px;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        margin-top: 300px;
+        margin-left: 120px;
+        border: solid grey 5px;
+    }
+
+    @keyframes anim {
+        100% {
+            width: 80%;
+            background-color: orange;
+            border: orange;
+        }
+    }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No</title>
+</head>
+
+<body>
+    <main>
+        <header>You have chosen No</header><br>
+        <a href="../index.html">Go back to main page</a><br>
+        <div class="rect"></div>
+    </main>
+</body>
+

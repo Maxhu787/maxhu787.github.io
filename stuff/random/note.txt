@@ -1,0 +1,32 @@
+#1 - 0:41 - Web application using Api 
+#2 - 2:13 - Brochure site
+#3 - 4:06 - E-commerce site
+#4 - 6:23 - Personal Portfolio
+#5 - 7:44 - Simple game
+
+Beginner Projects
+ #1 Password Generator
+ #2 Tic-Tac-Toe
+ #3 Build a website w/flask
+ #4 Web Scraper w/beautiful soup w/selenium
+ #5 Choose your own Text Adventure Game
+
+
+Intermediate Projects
+ #1 2D Games w/Python
+ #2 Microcontroller App w/rasperry pie
+ #3 Soduku solver
+ #4 Algorithm Visualizer
+ #5 Project Scheduler
+
+Advanced Projects
+ #1 Chess/Physics/Game Engine eg Golf game with physics
+ #2 Build an Interpreter
+ #3 Machine Learning or AI project
+ #4 Microcontroller project, eg security system
+ #5 Make your own API web project
+
+
+
+profile like thing 
+data stats

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="/g4o2-website/media/111.jpeg">
+    <link rel="apple-touch-icon" href="/g4o2-website/media/111.jpeg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+        body {
+            background: rgb(49, 49, 49);
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 100;
+            color: orange;
+            text-align: center;
+        }
+    </style>
+    <title>Random Word Gen</title>
+</head>
+
+<body>
+    <script>
+        function randomRange(myMin, myMax) {
+            return Math.floor(Math.random() * (myMax - myMin + 1) + myMin)
+        }
+
+        var i = 1;
+        function myLoop() {
+            setTimeout(function () {
+                document.write(String.fromCharCode(randomRange(33, 1199999999999983)));
+                i++;
+                if (true) {
+                    myLoop();
+                }
+            }, 1)
+        }
+        myLoop();
+    </script>
+</body>
+
+</html>

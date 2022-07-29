@@ -1,0 +1,11 @@
+Model Information:
+* title:	Xeno Raven
+* source:	https://sketchfab.com/3d-models/xeno-raven-e444a88e999549d99eacb1ea0f8e04e4
+* author:	Henrique Naspolini (https://sketchfab.com/henriquedw)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Xeno Raven" (https://sketchfab.com/3d-models/xeno-raven-e444a88e999549d99eacb1ea0f8e04e4) by Henrique Naspolini (https://sketchfab.com/henriquedw) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

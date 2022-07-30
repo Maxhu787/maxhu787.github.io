@@ -159,6 +159,13 @@
 			color: #000;
 		}
 
+		nav>ul p {
+			color: var(--page-theme);
+			font-size: 16px;
+			cursor: pointer;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
 		nav>ul li a::before {
 			content: '';
 			display: block;
@@ -301,23 +308,6 @@
 			position: fixed;
 			width: 100%;
 			margin-top: -28px;
-			/*animation-name: particle-background-anim;
-			animation-duration: 10s;
-			animation-iteration-count: infinite;*/
-		}
-
-		@keyframes particle-background-anim {
-			0% {
-				background-color: rgba(255, 165, 0, 0);
-			}
-
-			50% {
-				background-color: rgba(255, 165, 0, 0.2);
-			}
-
-			100% {
-				background-color: rgba(255, 165, 0, 0);
-			}
 		}
 
 		#content-wrapper {
@@ -525,13 +515,12 @@
 			bottom: 20px;
 			right: 30px;
 			z-index: 99;
-			font-size: 18px;
 			border: none;
 			outline: none;
 			background-color: var(--page-theme);
 			color: var(--text-color);
 			cursor: pointer;
-			padding-left: 8px;
+			padding: 8px 8px 8px 8px;
 			border-radius: 100px;
 			height: 50px;
 			width: 50px;
@@ -587,31 +576,35 @@
 							<!--About & Contact-->
 						</a></li>
 					<div class="dropdown">
-						<button class="dropbtn">PAGES &#128580;</button>
+						<button class="dropbtn">PAGES</button>
 						<div class="dropdown-content">
+							<p>HTML pages</p>
 							<a href="/Planet">Planet launcher website</a>
-							<a href="/g4o2-website/particles/index.html">Particle.js Test</a>
-							<a href="/g4o2-website/threejs/index.html">Three js Example gltf</a>
-							<a href="/g4o2-website/threejs/2.html">Three js Example 2 gltf</a>
-							<a href="/g4o2-website/threejs/3.html">Three js Example 3 gltf</a>
+							<a href="/g4o2-react-website">React JS version (not&nbsp;finished)</a>
 							<a href="/g4o2-website/threejs/4.html">Three js Reflective sphere</a>
-							<a href="/g4o2-website/crud/index.php">Database</a>
-							<a href="/g4o2-website/autosess-v2/index.php">db Login test</a>
+							<a href="/g4o2-website/particles/index.html">Particle js Test</a>
+							<a href="/g4o2-website/threejs/index.html">ThreeJS test 1</a>
+							<a href="/g4o2-website/threejs/2.html">Three js test 2</a>
+							<a href="/g4o2-website/threejs/3.html">Three js test 3</a>
 							<a href="/g4o2-website/guessing-game/guessinggame.html">guessing game</a>
-							<a href="/g4o2-website/crack/index.php" title="cracking (kind of)">MD5 cracking</a>
-							<a href="/g4o2-website/media-in-browser/video-playing.html">Video playing</a>
-							<a href="/g4o2-website/media-in-browser/index.html">Video html tag</a>
-							<a href="/g4o2-website/php-stuff/random.php">Random stuff</a>
+							<a href="/g4o2-website/media-in-browser/video-playing.html">Video player</a>
+							<a href="/g4o2-website/media-in-browser/index.html">media test</a>
 							<a href="/g4o2-website/random-word-gen/index.html">Random symbol generator</a>
-							<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
-							<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
-							<a href="/g4o2-website/crud/index.php">Test login</a>
 							<a href="/g4o2-website/test/yt-api.html">YouTube api</a>
 							<a href="/g4o2-website/wallee/walle.html">Wallee</a>
 							<a href="/g4o2-website/tables/index.html">testing stuff</a>
+							<p>PHP pages (won't work)</p>
+							<a href="/g4o2-website/crud/index.php">Database</a>
+							<a href="/g4o2-website/autosess-v2/index.php">db Login test</a>
+							<a href="/g4o2-website/crack/index.php" title="cracking (kind of)">MD5 cracking</a>
+							<a href="/g4o2-website/php-stuff/random.php">Random stuff</a>
+							<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
+							<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
+							<a href="/g4o2-website/crud/index.php">Test login</a>
+							
 						</div>
 					</div>
-					<button class="sideBar-button" onclick="sideBar_open()">☰</button>
+					<button class="sideBar-button" onclick="sideBar_open()" style="display:none">☰</button>
 				</ul>
 			</nav>
 		</div>
@@ -728,6 +721,8 @@
 					<i class="about-img fa-brands fa-html5 fa-2x"></i>
 					<i class="about-img fa-brands fa-css3-alt fa-2x"></i>
 					<i class="about-img fa-brands fa-js-square fa-2x"></i>
+					<i class="about-img fa-brands fa-react fa-2x"></i>
+					<i class="about-img fa-brands fa-node-js fa-2x"></i>
 					<i class="about-img fa-brands fa-python fa-2x"></i>
 					<i class="about-img fa-brands fa-php fa-2x"></i>
 					<object id="sql-logo" data="/g4o2-website/media/MySQL-Logo.svg" width="85" height="85"></object>
@@ -774,7 +769,7 @@
 			</div>
 		</section>
 	</footer>
-	<button onclick="topFunction()" id="topBtn" title="Go to to top">&#9995;</button>
+	<button onclick="topFunction()" id="topBtn" title="Go to to top"><img src="./media/up-arrow.svg" style="height: 20px;"></button>
 	<!--<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>-->
 	<script src="/g4o2-website/js/particles.js"></script>
 	<script type="text/javascript">

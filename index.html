@@ -61,7 +61,7 @@
 		}
 
 		main {
-			height: 4900px;
+			height: 5900px;
 		}
 
 		* {
@@ -601,7 +601,6 @@
 							<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
 							<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
 							<a href="/g4o2-website/crud/index.php">Test login</a>
-							
 						</div>
 					</div>
 					<button class="sideBar-button" onclick="sideBar_open()" style="display:none">☰</button>
@@ -703,10 +702,28 @@
 								src="/g4o2-website/certifications/JavaScript, jQuery, and JSON.png"
 								alt="certification"></a>
 					</div>
+					<div id="cert-14" class="cert-wrapper">
+						<a href="/g4o2-website/certifications/cert-14.html"><img class="cert-img cert-img-14" 
+								onmouseover="certScroll(4274)"
+								src="/g4o2-website/certifications/Introduction to CSS3.png" 
+								alt="certification"></a>
+					</div>
+					<div id="cert-15" class="cert-wrapper">
+						<a href="/g4o2-website/certifications/cert-15.html"><img class="cert-img cert-img-15" 
+								onmouseover="certScroll(4595)"
+								src="/g4o2-website/certifications/Getting Started with Git and GitHub.png" 
+								alt="certification"></a>
+					</div>
+					<div id="cert-16" class="cert-wrapper">
+						<a href="/g4o2-website/certifications/cert-16.html"><img class="cert-img cert-img-16" 
+								onmouseover="certScroll(4920)"
+								src="/g4o2-website/certifications/SQL for Data Science.png" 
+								alt="certification"></a>
+					</div>
 				</section>
 				<section id="badges">
-					<div class="badge badge-1" id="badge-1" data-iframe-width="150"
-						data-iframe-height="270" data-share-badge-id="0ebeaaeb-fbed-4794-b9e9-43cee08484bf"
+					<div class="badge badge-1" id="badge-1" data-iframe-width="150" data-iframe-height="270"
+						data-share-badge-id="0ebeaaeb-fbed-4794-b9e9-43cee08484bf"
 						data-share-badge-host="https://www.credly.com"></div>
 				</section>
 			</section>
@@ -762,15 +779,15 @@
 			</a>
 			<div id="copyright">
 				<p id="copyright-text">
-					<!--g4o2 2022 &copy; Copyright-->Since php doesn't work on github pages&nbsp;&nbsp;&nbsp;Most pages
+					Since php doesn't work on github pages&nbsp;&nbsp;&nbsp;Most pages
 					won't function properly
 				</p>
 				<span onclick="loadAnimation()" class="close">&times;</span>
 			</div>
 		</section>
 	</footer>
-	<button onclick="topFunction()" id="topBtn" title="Go to to top"><img src="/g4o2-website/media/up-arrow.svg" style="height: 20px;"></button>
-	<!--<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>-->
+	<button onclick="topFunction()" id="topBtn" title="Go to to top"><img src="/g4o2-website/media/up-arrow.svg"
+			style="height: 20px;"></button>
 	<script src="/g4o2-website/js/particles.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -796,10 +813,8 @@
 	<script>
 		const hoverText = document.getElementById('hover-stat');
 		const hoverStatText = document.getElementById('hover-stat-text');
-		//scrool to top btn
 		let topBtn = document.getElementById("topBtn");
 		hoverStat = false;
-		//top bottom detect
 		window.onscroll = function () {
 			hoverText.innerHTML = Math.round(window.pageYOffset);
 			//console.log(window.innerHeight, window.pageYOffset, document.body.offsetHeight);
@@ -811,10 +826,8 @@
 			} else {
 				document.getElementById('cert-header-two').style.opacity = '1';
 			}
-			//top btn detects when to show and hide
 			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-				topBtn.style.display = "block"/*"block" || "none"*/; //top btn temp disabled 
-				//enable by removing "none" ^^
+				topBtn.style.display = "block";
 			} else {
 				topBtn.style.display = "none";
 			}
@@ -950,6 +963,27 @@
 						});
 					} else if (cert.className == "cert-img cert-img-13") {
 						hoverStatText.innerHTML = ('JavaScript jQuery and JSON');
+						window.scrollTo({
+							top: x,
+							left: 0,
+							behavior: 'smooth'
+						});
+					} else if (cert.className == "cert-img cert-img-14") {
+						hoverStatText.innerHTML = ('Introduction to CSS3');
+						window.scrollTo({
+							top: x,
+							left: 0,
+							behavior: 'smooth'
+						});
+					} else if (cert.className == "cert-img cert-img-15") {
+						hoverStatText.innerHTML = ('Getting Started with Git and GitHub');
+						window.scrollTo({
+							top: x,
+							left: 0,
+							behavior: 'smooth'
+						});
+					} else if (cert.className == "cert-img cert-img-16") {
+						hoverStatText.innerHTML = ('SQL for Data Science');
 						window.scrollTo({
 							top: x,
 							left: 0,

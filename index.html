@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+	<link rel="stylesheet" href="/g4o2-website/css/animate.css" />
 	<script src="https://kit.fontawesome.com/b60596f9d0.js" crossorigin="anonymous"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="/g4o2-website/media/111.jpeg">
 	<link rel="icon" href="/g4o2-website/media/111.jpeg">
@@ -38,6 +38,7 @@
 			background: orange;
 			font-family: 'Work Sans', Arial, Helvetica, sans-serif;
 			font-weight: 100;
+			overflow-x: hidden;
 			text-align: center;
 			background: url(../g4o2-website/media/0000001.jpg);
 			background-repeat: no-repeat;
@@ -109,7 +110,7 @@
 			width: 54px;
 			border-radius: 50px;
 			float: left;
-			margin-left: -90px;
+			margin-left: -8%;
 			transition: all 0.35s ease-in-out;
 			border: solid var(--page-theme-second) 3px;
 			margin-top: 6px;
@@ -121,6 +122,14 @@
 		.logo:hover {
 			padding: 3px;
 			border: none;
+		}
+
+		#logo-text {
+			font-family: 'orbitron';
+			float: left;
+			margin-top: 24px;
+			margin-left: .4%;
+			cursor: pointer;
 		}
 
 		/*@keyframes logo-anim {
@@ -561,12 +570,31 @@
 </head>
 
 <body>
+	<script>
+		$(document).ready(function () {
+			//$("body").addClass("animate__hinge");
+			$("#logo-text").hover(function() {
+				setTimeout(
+					function() {
+						$("#logo-text").addClass("animate__hinge");
+						$('#logo-text').css('pointer-events', 'none');
+					}, 800);
+			}, function () {
+				setTimeout(
+					function () {
+						$("#logo-text").removeClass("animate__hinge");
+						$('#logo-text').css('pointer-events', 'auto');
+					}, 3000);
+			})
+		});
+	</script>
 	<header class="navbar-header">
 		<div class="container">
 			<div class="logo-container">
 				<a class="logo-header" href="about.html">
 					<img class="logo" alt="logo" src="/g4o2-website/media/111(smaller version).jpg">
 				</a>
+				<p id="logo-text">Hu Kaixiang 胡凱翔</p>
 			</div>
 			<nav>
 				<ul id="main-nav">
@@ -733,7 +761,7 @@
 			</section>
 			<article id="about">
 				<header id="about-header" class="header">MORE ABOUT ME</header>
-				<p>Im&nbsp;a thirteen&#8209;year&#8209;old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</p>
+				<div style="margin-top: 10px;">Im&nbsp;a&nbsp;<div style="display:inline" id="myAge">14</div>-year-old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</div>
 				<p>So far I have learned some
 					<i class="about-img fa-brands fa-html5 fa-2x"></i>
 					<i class="about-img fa-brands fa-css3-alt fa-2x"></i>
@@ -744,7 +772,7 @@
 					<i class="about-img fa-brands fa-php fa-2x"></i>
 					<object id="sql-logo" data="/g4o2-website/media/MySQL-Logo.svg" width="85" height="85"></object>
 				</p>
-				<p>Page for testing</p>
+				<p>Test portfolio site</p>
 			</article>
 		</div>
 	</main>
@@ -789,6 +817,20 @@
 	<button onclick="topFunction()" id="topBtn" title="Go to to top"><img src="/g4o2-website/media/up-arrow.svg"
 			style="height: 20px;"></button>
 	<script src="/g4o2-website/js/particles.js"></script>
+	<script>
+		var age, daysBetweenDates;
+		daysBetweenDates = function (d1, d2) {
+			var diffDays, oneDay;
+			oneDay = 24 * 60 * 60 * 1000;
+			diffDays = (d2 - Date.parse(d1)) / oneDay;
+			return diffDays;
+		};
+
+		age = function () {
+			$('#myAge').text((daysBetweenDates('Feb 7, 2008 00:00:00', new Date()) / 365).toFixed(8) + " years old");
+		};
+		setInterval(age, 500);
+	</script>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			//scroll to top at refresh / start

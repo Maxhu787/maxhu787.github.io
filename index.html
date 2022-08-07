@@ -565,6 +565,28 @@
 				opacity: 0;
 			}
 		}
+		@media only screen and (min-width: 694px) and (max-width: 799px) {
+			body {
+				color: green !important;
+			}
+			nav li {
+				margin-left: 30px !important;
+			}
+			.dropbtn {
+				margin-left: 0px !important;
+			}
+		}
+		@media only screen and (min-width: 605px) and (max-width: 693px) {
+			body {
+				color: red !important;
+			}
+			nav li {
+				margin-left: 15px !important;
+			}
+			.dropbtn {
+				margin-left: -5px;
+			}
+		}
 	</style>
 	<title>g4o2 website</title>
 </head>
@@ -807,8 +829,7 @@
 			</a>
 			<div id="copyright">
 				<p id="copyright-text">
-					Since php doesn't work on github pages&nbsp;&nbsp;&nbsp;Most pages
-					won't function properly
+					Test Website
 				</p>
 				<span onclick="loadAnimation()" class="close">&times;</span>
 			</div>
@@ -962,7 +983,7 @@
 							behavior: 'smooth'
 						});
 					} else if (cert.className == "cert-img cert-img-7") {
-						hoverStatText.innerHTML = ('programming-for-everybody(getting-started-with-python)');
+						hoverStatText.innerHTML = ('programming for everybody (py)');
 						window.scrollTo({
 							top: x,
 							left: 0,

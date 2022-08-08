@@ -546,15 +546,21 @@
 		}
 
 		::-webkit-scrollbar-track {
-			background: rgb(44, 42, 37)/*#f1f1f1*/;
+			background: rgb(44, 42, 37)
+				/*#f1f1f1*/
+			;
 		}
 
 		::-webkit-scrollbar-thumb {
-			background: var(--page-theme)/*#888*/;
+			background: var(--page-theme)
+				/*#888*/
+			;
 		}
 
 		::-webkit-scrollbar-thumb:hover {
-			background:  var(--page-theme-second)/*#555*/;
+			background: var(--page-theme-second)
+				/*#555*/
+			;
 		}
 
 		.blink {
@@ -566,31 +572,115 @@
 				opacity: 0;
 			}
 		}
-		@media only screen and (min-width: 694px) and (max-width: 799px) {
+
+		@media only screen and (max-width: 1150px) {
 			body {
-				color: green !important;
+				color: yellow !important;
 			}
-			nav li {
-				margin-left: 30px !important;
-			}
-			.dropbtn {
-				margin-left: 0px !important;
-			}
+
 			#hover-stat-text {
 				display: none;
 			}
 		}
-		@media only screen and (min-width: 605px) and (max-width: 693px) {
+
+		@media only screen and (min-width: 694px) and (max-width: 799px) {
+			body {
+				color: green !important;
+			}
+
+			nav li {
+				margin-left: 30px !important;
+			}
+
+			.dropbtn {
+				margin-left: 0px !important;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+		}
+
+		@media only screen and (min-width: 605px) and (max-width: 694px) {
 			body {
 				color: red !important;
+			}
+
+			main {
+				height: 5940px;
 			}
 			nav li {
 				margin-left: 15px !important;
 			}
+
 			.dropbtn {
 				margin-left: -5px;
 			}
+
 			#hover-stat-text {
+				display: none;
+			}
+			
+			#cert-header-two {
+				display: none;
+			}
+		}
+
+		@media only screen and (min-width: 465px) and (max-width: 605px) {
+			body {
+				color: blue !important;
+			}
+			main {
+				height: 4780px;
+			}
+			nav {
+				display: none;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+
+			.cert-img {
+				height: 160px;
+			}
+
+			.cert-img:hover {
+				height: 280px;
+			}
+			
+			#cert-header-two {
+				display: none;
+			}
+		}
+		@media only screen and (max-width: 465px) {
+			body {
+				color: pink !important;
+			}
+			main {
+				height: 4200;
+			}
+
+			nav {
+				display: none;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+
+			.cert-img {
+				height: 160px;
+				transition: all .4s ease-in-out;
+			}
+
+			.cert-img:hover {
+				height: 220px;
+			}
+			.cert-wrapper {
+				padding: 30px;
+			}
+			#cert-header-two {
 				display: none;
 			}
 		}
@@ -602,9 +692,9 @@
 	<script>
 		$(document).ready(function () {
 			//$("body").addClass("animate__hinge");
-			$("#logo-text").hover(function() {
+			$("#logo-text").hover(function () {
 				setTimeout(
-					function() {
+					function () {
 						$("#logo-text").addClass("animate__hinge");
 						$('#logo-text').css('pointer-events', 'none');
 					}, 800);
@@ -615,6 +705,9 @@
 						$('#logo-text').css('pointer-events', 'auto');
 					}, 3000);
 			})
+		});
+		$(window).resize(function () {
+			$("#cert-header-two").text($(window).width());
 		});
 	</script>
 	<header class="navbar-header">
@@ -760,22 +853,20 @@
 								alt="certification"></a>
 					</div>
 					<div id="cert-14" class="cert-wrapper">
-						<a href="/g4o2-website/certifications/cert-14.html"><img class="cert-img cert-img-14" 
+						<a href="/g4o2-website/certifications/cert-14.html"><img class="cert-img cert-img-14"
 								onmouseover="certScroll(4274)"
-								src="/g4o2-website/certifications/Introduction to CSS3.png" 
-								alt="certification"></a>
+								src="/g4o2-website/certifications/Introduction to CSS3.png" alt="certification"></a>
 					</div>
 					<div id="cert-15" class="cert-wrapper">
-						<a href="/g4o2-website/certifications/cert-15.html"><img class="cert-img cert-img-15" 
+						<a href="/g4o2-website/certifications/cert-15.html"><img class="cert-img cert-img-15"
 								onmouseover="certScroll(4595)"
-								src="/g4o2-website/certifications/Getting Started with Git and GitHub.png" 
+								src="/g4o2-website/certifications/Getting Started with Git and GitHub.png"
 								alt="certification"></a>
 					</div>
 					<div id="cert-16" class="cert-wrapper">
-						<a href="/g4o2-website/certifications/cert-16.html"><img class="cert-img cert-img-16" 
+						<a href="/g4o2-website/certifications/cert-16.html"><img class="cert-img cert-img-16"
 								onmouseover="certScroll(4920)"
-								src="/g4o2-website/certifications/SQL for Data Science.png" 
-								alt="certification"></a>
+								src="/g4o2-website/certifications/SQL for Data Science.png" alt="certification"></a>
 					</div>
 				</section>
 				<section id="badges">
@@ -790,7 +881,8 @@
 			</section>
 			<article id="about">
 				<header id="about-header" class="header">MORE ABOUT ME</header>
-				<div style="margin-top: 10px;">Im&nbsp;a&nbsp;<div style="display:inline" id="myAge">14</div>-year-old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</div>
+				<div style="margin-top: 10px;">Im&nbsp;a&nbsp;<div style="display:inline" id="myAge">14</div>
+					-year-old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</div>
 				<p>So far I have learned some
 					<i class="about-img fa-brands fa-html5 fa-2x"></i>
 					<i class="about-img fa-brands fa-css3-alt fa-2x"></i>
@@ -868,7 +960,7 @@
 				behavior: 'smooth'
 			});
 			particlesJS.load('particles', '/g4o2-website/particles-config.json', function () {
-				console.log('working');
+				//console.log('working');
 			})
 			/*let mainTheme = window.prompt("Theme (Enter color)");
 			let mainThemeSecond = window.prompt("Second theme");
@@ -943,122 +1035,126 @@
 						});
 					}
 				}
-			}*/
+			}*/ 
 			const images = document.querySelectorAll('img');
-			for (const cert of images) {
-				if (cert.matches(':hover')) {
-					if (cert.className == "cert-img cert-img-1") {
-						hoverStatText.innerHTML = ('Web Applications for Everybody Specialization');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-2") {
-						hoverStatText.innerHTML = ('JavaScript Algorithms & Data Structures');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-3") {
-						hoverStatText.innerHTML = ('Responsive web design certification');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-4") {
-						hoverStatText.innerHTML = ('Front End Development Libraries');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-5") {
-						hoverStatText.innerHTML = ('Scientific Computing with Python');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-6") {
-						hoverStatText.innerHTML = ('python data stuctures');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-7") {
-						hoverStatText.innerHTML = ('programming for everybody (py)');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-8") {
-						hoverStatText.innerHTML = ('building web applications in php');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-9") {
-						hoverStatText.innerHTML = ('Introduction to SQL');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-10") {
-						hoverStatText.innerHTML = ('Introduction to HTML5');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-11") {
-						hoverStatText.innerHTML = ('Using Python to Access Web Data');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-12") {
-						hoverStatText.innerHTML = ('Building Database Applications in PHP');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-13") {
-						hoverStatText.innerHTML = ('JavaScript jQuery and JSON');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-14") {
-						hoverStatText.innerHTML = ('Introduction to CSS3');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-15") {
-						hoverStatText.innerHTML = ('Getting Started with Git and GitHub');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
-					} else if (cert.className == "cert-img cert-img-16") {
-						hoverStatText.innerHTML = ('SQL for Data Science');
-						window.scrollTo({
-							top: x,
-							left: 0,
-							behavior: 'smooth'
-						});
+			if (document.documentElement.clientWidth <= 605) {
+				//console.log("auto-scroll-disabled")
+			} else {
+				for (const cert of images) {
+					if (cert.matches(':hover')) {
+						if (cert.className == "cert-img cert-img-1") {
+							hoverStatText.innerHTML = ('Web Applications for Everybody Specialization');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-2") {
+							hoverStatText.innerHTML = ('JavaScript Algorithms & Data Structures');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-3") {
+							hoverStatText.innerHTML = ('Responsive web design certification');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-4") {
+							hoverStatText.innerHTML = ('Front End Development Libraries');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-5") {
+							hoverStatText.innerHTML = ('Scientific Computing with Python');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-6") {
+							hoverStatText.innerHTML = ('python data stuctures');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-7") {
+							hoverStatText.innerHTML = ('programming for everybody (py)');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-8") {
+							hoverStatText.innerHTML = ('building web applications in php');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-9") {
+							hoverStatText.innerHTML = ('Introduction to SQL');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-10") {
+							hoverStatText.innerHTML = ('Introduction to HTML5');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-11") {
+							hoverStatText.innerHTML = ('Using Python to Access Web Data');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-12") {
+							hoverStatText.innerHTML = ('Building Database Applications in PHP');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-13") {
+							hoverStatText.innerHTML = ('JavaScript jQuery and JSON');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-14") {
+							hoverStatText.innerHTML = ('Introduction to CSS3');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-15") {
+							hoverStatText.innerHTML = ('Getting Started with Git and GitHub');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						} else if (cert.className == "cert-img cert-img-16") {
+							hoverStatText.innerHTML = ('SQL for Data Science');
+							window.scrollTo({
+								top: x,
+								left: 0,
+								behavior: 'smooth'
+							});
+						}
 					}
 				}
 			}
@@ -1071,12 +1167,12 @@
 		window.addEventListener('scroll', (e) => {
 			newValue = window.pageYOffset;
 			if (oldValue < newValue) {
-				console.log("Up");
-				/*copyright.style.backgroundColor = "white";
-				/*copyright.style.visibility = "visible";*/
+				/*console.log("Up");
+				copyright.style.backgroundColor = "white";
+				copyright.style.visibility = "visible";*/
 			} else if (oldValue > newValue) {
-				console.log("Down");
-				/*copyrightText.style.fontSize = "30px";*/
+				/*console.log("Down");
+				copyrightText.style.fontSize = "30px";*/
 			}
 			oldValue = newValue;
 		});
@@ -1089,28 +1185,6 @@
 		}
 		function loadAnimation() {
 			copyright.className = 'classname';
-		}
-
-		function sideBar_open() {
-			document.getElementById("sideBar").style.width = "100%"; //document.body.offsetHeight
-			document.getElementById("sideBar").style.display = "block";
-			document.getElementById("content-wrapper").style.display = "none";
-			document.querySelector('footer').style = 'display: none';
-			window.scrollTo({
-				top: 0,
-				left: 0,
-				behavior: 'smooth'
-			});
-			document.body.style.background = "#f3f3f3 url('/g4o2-website/media/0.jpeg') no-repeat fixed";
-			document.body.style.background = "url('/g4o2-website/media/111.jpeg') no-repeat fixed";
-			document.body.style.backgroundSize = "100% 100%";
-		}
-		function sideBar_close() {
-			document.getElementById("sideBar").style.display = "none";
-			document.getElementById("content-wrapper").style.display = "block";
-			document.querySelector('footer').style = 'display: block';
-			document.body.style.background = "url('/g4o2-website/media/0000001.jpg') no-repeat fixed";
-			document.body.style.backgroundSize = "100% 100%";
 		}
 	</script>
 	</div>

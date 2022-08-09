@@ -240,7 +240,7 @@
 			background-color: var(--page-theme-second);
 			cursor: pointer;
 		}
-
+	
 		.sideBar-container {
 			position: relative;
 			display: inline-block;
@@ -260,56 +260,27 @@
 			float: none;
 		}
 
-		.sideBar-button {
+		#sideBar-button {
+			z-index: 10;
 			border: none;
 			display: inline-block;
 			padding: 8px 16px;
 			vertical-align: middle;
 			overflow: hidden;
 			text-decoration: none;
-			color: inherit;
-			background-color: inherit;
+			color: #000;
+			background-color: var(--page-theme);
 			text-align: left;
 			cursor: pointer;
 			white-space: nowrap;
-			margin-left: 80px;
-			margin-right: -100px;
+			margin-right: -35px;
+			margin-top: 14px;
 		}
 
-		.sideBar-button:hover {
+		#sideBar-button:hover {
 			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			background-color: rgb(71, 71, 71);
 			color: orange;
-		}
-
-		.sideBar-content-button {
-			border: none;
-			display: inline-block;
-			padding: 8px 16px;
-			vertical-align: middle;
-			overflow: hidden;
-			text-decoration: none;
-			color: inherit;
-			background-color: inherit;
-			text-align: center;
-			cursor: pointer;
-			white-space: nowrap;
-			background-color: white;
-		}
-
-		.sideBar-content-button:hover {
-			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			background-color: orange;
-		}
-
-		.sideBar-close-button {
-			margin-left: 90%;
-			margin-top: 20px;
-		}
-
-		#sideBar {
-			background-color: white;
-			color: rgb(71, 71, 71);
 		}
 
 		#particles {
@@ -573,10 +544,46 @@
 			}
 		}
 
+		/*------------sideBar------------*/
+		.sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+		/*------------sideBar------------*/
+
 		@media only screen and (max-width: 1150px) {
-			body {
+			/*body {
 				color: yellow !important;
-			}
+			}*/
 
 			#hover-stat-text {
 				display: none;
@@ -584,9 +591,9 @@
 		}
 
 		@media only screen and (min-width: 694px) and (max-width: 799px) {
-			body {
+			/*body {
 				color: green !important;
-			}
+			}*/
 
 			nav li {
 				margin-left: 30px !important;
@@ -602,9 +609,9 @@
 		}
 
 		@media only screen and (min-width: 605px) and (max-width: 694px) {
-			body {
+			/*body {
 				color: red !important;
-			}
+			}*/
 
 			main {
 				height: 5940px;
@@ -627,18 +634,26 @@
 		}
 
 		@media only screen and (min-width: 465px) and (max-width: 605px) {
-			body {
+			/*body {
 				color: blue !important;
-			}
+			}*/
 			main {
-				height: 4780px;
+				height: 5080px;
 			}
-			nav {
+			
+			nav ul li{
+				display: none;
+			}
+			nav .dropdown {
 				display: none;
 			}
 
 			#hover-stat-text {
 				display: none;
+			}
+
+			#sideBar-button {
+				display: inline-block;
 			}
 
 			.cert-img {
@@ -654,19 +669,27 @@
 			}
 		}
 		@media only screen and (max-width: 465px) {
-			body {
+			/*body {
 				color: pink !important;
-			}
+			}*/
 			main {
-				height: 4200;
+				height: 4500px;
 			}
 
-			nav {
+			nav ul li{
+				display: none;
+			}
+			nav .dropdown {
 				display: none;
 			}
 
 			#hover-stat-text {
 				display: none;
+			}
+
+			#sideBar-button {
+				display: inline-block;
+				margin-right: -25px;
 			}
 
 			.cert-img {
@@ -675,7 +698,7 @@
 			}
 
 			.cert-img:hover {
-				height: 220px;
+				height: 200px;
 			}
 			.cert-wrapper {
 				padding: 30px;
@@ -722,7 +745,7 @@
 				<ul id="main-nav">
 					<li><a href="#" id="hover-stat-text">Welcome</a></li>
 					<li><a href="#" id="hover-stat">Stats</a></li>
-					<li><a href="#about">Social Media
+					<li><a href="#contact">Social Media
 							<!--About & Contact-->
 						</a></li>
 					<div class="dropdown">
@@ -753,15 +776,45 @@
 							<a href="/g4o2-website/crud/index.php">Test login</a>
 						</div>
 					</div>
-					<button class="sideBar-button" onclick="sideBar_open()" style="display:none">☰</button>
+					<button id="sideBar-button" onclick="openNav()">☰</button>
 				</ul>
 			</nav>
 		</div>
 	</header>
-	<div id="sideBar-container">
-		<div style="display: none;" id="sideBar">
-			<button class="sideBar-close-button sideBar-content-button" onclick="sideBar_close()">Close &times;</button>
-		</div>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#about">About</a>
+		<a href="#contact">Contact & Social&nbsp;Media</a>
+		<a href="#">Test</a>
+		<a href="#">Test</a>
+		<!--<div class="dropdown">
+			<button class="sideNav-btn">PAGES</button>
+			<div class="dropdown-content">
+				<p>HTML pages</p>
+				<a href="/Planet">Planet launcher website</a>
+				<a href="/g4o2-react-website">React JS version (not&nbsp;finished)</a>
+				<a href="/g4o2-website/threejs/4.html">Three js Reflective sphere</a>
+				<a href="/g4o2-website/particles/index.html">Particle js Test</a>
+				<a href="/g4o2-website/threejs/index.html">ThreeJS test 1</a>
+				<a href="/g4o2-website/threejs/2.html">Three js test 2</a>
+				<a href="/g4o2-website/threejs/3.html">Three js test 3</a>
+				<a href="/g4o2-website/guessing-game/guessinggame.html">guessing game</a>
+				<a href="/g4o2-website/media-in-browser/video-playing.html">Video player</a>
+				<a href="/g4o2-website/media-in-browser/index.html">media test</a>
+				<a href="/g4o2-website/random-word-gen/index.html">Random symbol generator</a>
+				<a href="/g4o2-website/test/yt-api.html">YouTube api</a>
+				<a href="/g4o2-website/wallee/walle.html">Wallee</a>
+				<a href="/g4o2-website/tables/index.html">testing stuff</a>
+				<p>PHP pages (won't work)</p>
+				<a href="/g4o2-website/crud/index.php">Database</a>
+				<a href="/g4o2-website/autosess-v2/index.php">db Login test</a>
+				<a href="/g4o2-website/crack/index.php" title="cracking (kind of)">MD5 cracking</a>
+				<a href="/g4o2-website/php-stuff/random.php">Random stuff</a>
+				<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
+				<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
+				<a href="/g4o2-website/crud/index.php">Test login</a>
+			</div>
+		</div>-->
 	</div>
 	<main>
 		<div id="content-wrapper">
@@ -1185,6 +1238,14 @@
 		}
 		function loadAnimation() {
 			copyright.className = 'classname';
+		}
+
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "100%"/*"250px"*/;
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
 		}
 	</script>
 	</div>

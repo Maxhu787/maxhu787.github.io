@@ -1,4 +1,3 @@
 # g4o2-website
 
-Test / Temp portfolio website <br />
-Still working on it <br />
+Test portfolio website that I'm still working on <br />

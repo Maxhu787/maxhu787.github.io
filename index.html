@@ -833,6 +833,48 @@
 				<p id="cert-header">
 					Welcome to my test portfolio website
 				</p>
+				<script>
+					autoplay = true
+					document.getElementById("background-music"); 
+					window.addEventListener('click', (event) => {
+						if(autoplay === true) {
+							document.getElementById("background-music").play();
+							autoplay = false;
+						}
+					});
+					function toggleMusic() {
+						if(document.getElementById("background-music").paused === false) {
+							document.getElementById("background-music").pause();
+							document.getElementById("background-music-control").innerHTML = '<i class="fa-regular fa-volume"></i>';
+						} else if(document.getElementById("background-music").paused === true) {
+							document.getElementById("background-music").play();
+							document.getElementById("background-music-control").innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+						}
+					}
+				</script>
+				<style>
+					#background-music-control {
+						display: block;
+						position: fixed;
+						bottom: 80px;
+						right: 30px;
+						z-index: 99;
+						border: none;
+						outline: none;
+						background-color: var(--page-theme);
+						color: var(--text-color);
+						cursor: pointer;
+						padding: 8px 8px 8px 8px;
+						border-radius: 100px;
+						height: 50px;
+						width: 50px;
+						text-align: center;
+					}
+				</style>
+				<audio id="background-music" loop autoplay src="./media/GitHub-Skyline.mp3" type="audio/mp3"></audio>
+				<button onclick="toggleMusic()" id="background-music-control">
+					<i class="fa-solid fa-volume-xmark"></i>
+				</button>
 				<marquee style="display: none" behavior="scroll" direction="left" scrollamount="12" class="blink">hidden
 				</marquee>
 				<h3 id="cert-header-two">CERTIFICATIONS</h3>
@@ -966,7 +1008,7 @@
 	</main>
 	<footer>
 		<section id="contact">
-			<header id="contact-header" class="header">Contact and Social Media</header>
+			<header id="contact-header" class="header">Social Media</header>
 			<a id="contact-link" href="https://www.linkedin.com/in/kaixiang-hu-6ab83a237/" target="_blank"
 				title="Linkedin Profile">
 				<i alt="linkedin" class="contact-img fa-brands fa-linkedin fa-3x"></i>

@@ -1082,8 +1082,7 @@
 			</section>
 			<article id="about">
 				<header id="about-header" class="header">MORE ABOUT ME</header>
-				<div style="margin-top: 10px;">Im&nbsp;a&nbsp;<div style="display:inline" id="myAge">14</div>
-					-year-old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</div>
+				<div style="margin-top: 10px;">Im&nbsp;a&nbsp;<!--<span style="color: green; padding: 5px; background-color: rgba(0, 0, 0, 0.6); border-radius: 2px;">--><div style="display:inline" id="myAge">14</div><!--</span>-->-year-old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</div>
 				<p>So far I have learned some
 					<i class="about-img fa-brands fa-html5 fa-2x"></i>
 					<i class="about-img fa-brands fa-css3-alt fa-2x"></i>
@@ -1094,7 +1093,20 @@
 					<i class="about-img fa-brands fa-php fa-2x"></i>
 					<object id="sql-logo" data="/g4o2-website/media/MySQL-Logo.svg" width="85" height="85"></object>
 				</p>
-				<p>Test portfolio site</p>
+				
+			</article>
+			<article id="github-profile">
+				<header id="about-header" class="header">GITHUB PROFILE STATS</header>
+				<p text-align="center"><a target="_blank" href="https://github.com/maxhu787"><img src="https://img.shields.io/github/followers/maxhu787.svg?style=social&label=Follow%20Me" width="125"></a>
+				</p>
+				<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=maxhu787&theme=react&bg_color=0D1117&layout=compact&langs_count=7"
+					alt="Languages">
+				<img src="https://github-readme-stats.vercel.app/api?username=maxhu787&show_icons=true&theme=react&bg_color=0D1117"
+					alt="Github stats">
+				<img src="https://github-readme-streak-stats.herokuapp.com/?user=maxhu787&theme=react&hide_border=true"
+					alt="Github stats">
+				<img src="https://github-profile-trophy.vercel.app/?username=maxhu787&theme=matrix" alt="Github stats">
+				<p style="font-family: 'orbitron'; color: #fff;">Test portfolio website</p>
 			</article>
 		</div>
 	</main>
@@ -1236,11 +1248,9 @@
 			newValue = window.pageYOffset;
 			if (oldValue < newValue) {
 				/*console.log("Up");
-				copyright.style.backgroundColor = "white";
-				copyright.style.visibility = "visible";*/
+			copyright.style.backgroundColor = "white";*/			
 			} else if (oldValue > newValue) {
-				/*console.log("Down");
-				copyrightText.style.fontSize = "30px";*/
+				/*console.log("Down");*/
 			}
 			oldValue = newValue;
 		});

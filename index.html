@@ -365,6 +365,9 @@
 		#about {
 			margin-top: 100px;
 			color: var(--text-color);
+			background-color: var(--page-bg);;
+			padding: 10px;
+			opacity: 0.8;
 		}
 
 		#about-header {
@@ -809,6 +812,28 @@
 				display: none;
 			}
 		}
+
+		.rainbow_text_animated {
+			background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent !important;
+			animation: rainbow_animation 6s ease-in-out infinite;
+			background-size: 400% 100%;
+		}
+
+		@keyframes rainbow_animation {
+			0%,
+			100% {
+				background-position: 0 0;
+			}
+
+			50% {
+				background-position: 100% 0;
+			}
+		}
+
+
 	</style>
 	<title>g4o2 website</title>
 </head>
@@ -855,27 +880,26 @@
 					<div class="dropdown">
 						<button class="dropbtn">PAGES</button>
 						<div class="dropdown-content">
-							<p>Websites I made</p>
+							<p>Other sites</p>
 							<a href="https://php-sql-chat.maxhu787.repl.co">g4o2-chat</a>
 							<!--<a href="/mcpi-player-skin-editor/index.html">3d mcpi editor</a>
 							<a href="https://pigames-server.github.io/">PIGAMES Server</a>-->
 							<a href="https://maxhu787.github.io/Planet/">Planet launcher website</a>
-							<p>HTML pages</p>
-							<a href="https://maxhu787.github.io/g4o2-react-website">React JS version
-								(not&nbsp;finished)</a>
+							<p>pages</p>
+							<a href="https://maxhu787.github.io/g4o2-react-website">React JS version (unfinished)</a>
 							<a href="/g4o2-website/threejs/4.html">Three js Reflective sphere</a>
 							<a href="/g4o2-website/particles/index.html">Particle js Test</a>
 							<a href="/g4o2-website/threejs/index.html">ThreeJS test 1</a>
-							<a href="/g4o2-website/threejs/2.html">Three js test 2</a>
-							<a href="/g4o2-website/threejs/3.html">Three js test 3</a>
+							<a href="/g4o2-website/threejs/2.html">ThreeJS test 2</a>
+							<a href="/g4o2-website/threejs/3.html">ThreeJS test 3</a>
 							<a href="/g4o2-website/g4o2_ascii.html">g4o2_ascii</a>
-							<a href="/g4o2-website/guessing-game/guessinggame.html">guessing game</a>
+							<!--<a href="/g4o2-website/guessing-game/guessinggame.html">guessing game</a>
 							<a href="/g4o2-website/media-in-browser/video-playing.html">Video player</a>
-							<a href="/g4o2-website/media-in-browser/index.html">media test</a>
-							<a href="/g4o2-website/random-word-gen/index.html">Random symbol generator</a>
-							<a href="/g4o2-website/test/yt-api.html">YouTube api</a>
-							<a href="/g4o2-website/wallee/walle.html">Wallee</a>
-							<a href="/g4o2-website/tables/index.html">testing stuff</a>
+							<a href="/g4o2-website/media-in-browser/index.html">media test</a>-->
+							<a href="/g4o2-website/random-word-gen/index.html">test</a>
+							<!--<a href="/g4o2-website/test/yt-api.html">YouTube api</a>
+							<a href="/g4o2-website/wallee/walle.html">Wallee</a>-->
+							<!--<a href="/g4o2-website/tables/index.html">testing stuff</a>
 							<p>PHP pages (won't work)</p>
 							<a href="/g4o2-website/crud/index.php">Database</a>
 							<a href="/g4o2-website/autosess-v2/index.php">db Login test</a>
@@ -883,7 +907,7 @@
 							<a href="/g4o2-website/php-stuff/random.php">Random stuff</a>
 							<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
 							<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
-							<a href="/g4o2-website/crud/index.php">Test login</a>
+							<a href="/g4o2-website/crud/index.php">Test login</a>-->
 						</div>
 					</div>
 					<button id="sideBar-button" onclick="openNav()">☰</button>
@@ -894,9 +918,8 @@
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="#about">About</a>
-		<a href="#contact">Contact & Social&nbsp;Media</a>
-		<a href="#">Test</a>
-		<a href="#">Test</a>
+		<a href="#contact">Social&nbsp;Media</a>
+		<a href="https://php-sql-chat.maxhu787.repl.co/index.php">g4o2-chat</a>
 		<!--<div class="dropdown">
 			<button class="sideNav-btn">PAGES</button>
 			<div class="dropdown-content">
@@ -932,8 +955,8 @@
 				<div id="particles"></div>
 			</section>
 			<section id="certifications">
-				<p id="cert-header">
-					Welcome to my test portfolio website
+				<p class="rainbow_text_animated" id="cert-header">
+					Welcome to my test website
 				</p>
 				<script>
 					/*autoplay = true
@@ -979,8 +1002,26 @@
 				</button>-->
 				<marquee style="display: none" behavior="scroll" direction="left" scrollamount="12" class="blink">hidden
 				</marquee>
-				<h3 id="cert-header-two">CERTIFICATIONS</h3>
+				<!--<h3 id="cert-header-two">CERTIFICATIONS</h3>-->
 				<section>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-2.html"><img class="cert-img"
+									src="/g4o2-website/certifications/JavaScript-Algorithms-and-Data-Structures.png" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-3.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Responsive web design certification.png" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-4.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Front End Development Libraries.PNG" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-5.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Scientific Computing with Python.PNG" alt="certification"></a>
+						</div>
+					</div>
 					<div class="cert-container">
 						<div class="cert-wrapper">
 							<a href="/g4o2-website/certifications/cert-1.html"><img class="cert-img"
@@ -1003,24 +1044,6 @@
 						<div class="cert-wrapper">
 							<a href="/g4o2-website/certifications/cert-13.html"><img class="cert-img"
 									src="/g4o2-website/certifications/JavaScript, jQuery, and JSON.png" alt="certification"></a>
-						</div>
-					</div>
-					<div class="cert-container">
-						<div class="cert-wrapper">
-							<a href="/g4o2-website/certifications/cert-2.html"><img class="cert-img"
-									src="/g4o2-website/certifications/JavaScript-Algorithms-and-Data-Structures.png" alt="certification"></a>
-						</div>
-						<div class="cert-wrapper">
-							<a href="/g4o2-website/certifications/cert-3.html"><img class="cert-img"
-									src="/g4o2-website/certifications/Responsive web design certification.png" alt="certification"></a>
-						</div>
-						<div class="cert-wrapper">
-							<a href="/g4o2-website/certifications/cert-4.html"><img class="cert-img"
-									src="/g4o2-website/certifications/Front End Development Libraries.PNG" alt="certification"></a>
-						</div>
-						<div class="cert-wrapper">
-							<a href="/g4o2-website/certifications/cert-5.html"><img class="cert-img"
-									src="/g4o2-website/certifications/Scientific Computing with Python.PNG" alt="certification"></a>
 						</div>
 					</div>
 					<div class="cert-container">
@@ -1083,7 +1106,7 @@
 			<article id="about">
 				<header id="about-header" class="header">MORE ABOUT ME</header>
 				<div style="margin-top: 10px;">Im&nbsp;a&nbsp;<!--<span style="color: green; padding: 5px; background-color: rgba(0, 0, 0, 0.6); border-radius: 2px;">--><div style="display:inline" id="myAge">14</div><!--</span>-->-year-old&nbsp;kid that&nbsp;is&nbsp;intrested in&nbsp;programming</div>
-				<p>So far I have learned some
+				<p style="user-select: none;">
 					<i class="about-img fa-brands fa-html5 fa-2x"></i>
 					<i class="about-img fa-brands fa-css3-alt fa-2x"></i>
 					<i class="about-img fa-brands fa-js-square fa-2x"></i>
@@ -1091,11 +1114,17 @@
 					<i class="about-img fa-brands fa-node-js fa-2x"></i>
 					<i class="about-img fa-brands fa-python fa-2x"></i>
 					<i class="about-img fa-brands fa-php fa-2x"></i>
-					<object id="sql-logo" data="/g4o2-website/media/MySQL-Logo.svg" width="85" height="85"></object>
+					<i class="about-img fa-brands fa-bootstrap fa-2x"></i><br />
+					<object id="sql-logo" data="/g4o2-website/media/graphql.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/vscode.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/mysql.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/jquery.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/ruby-lang.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/postgresql.svg"></object>
 				</p>
 				
 			</article>
-			<article id="github-profile">
+			<!--<article id="github-profile">
 				<header id="about-header" class="header">GITHUB PROFILE STATS</header>
 				<p text-align="center"><a target="_blank" href="https://github.com/maxhu787"><img src="https://img.shields.io/github/followers/maxhu787.svg?style=social&label=Follow%20Me" width="125"></a>
 				</p>
@@ -1108,7 +1137,7 @@
 				<img src="https://github-profile-trophy.vercel.app/?username=maxhu787&theme=matrix" alt="Github stats"><br />
 				<img style="width: 800px;" src="https://activity-graph.herokuapp.com/graph?username=maxhu787&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" />
 				<p style="font-family: 'orbitron'; color: #fff;">Test portfolio website</p>
-			</article>
+			</article>-->
 		</div>
 	</main>
 	<footer>

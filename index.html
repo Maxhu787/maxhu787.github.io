@@ -714,7 +714,8 @@
 			z-index: 1;
 			top: 0;
 			left: 0;
-			background-color: #111;
+			background-color: rgba(0, 0, 0, .6);
+			backdrop-filter: blur(.5rem);
 			overflow-x: hidden;
 			transition: 0.5s;
 			padding-top: 60px;
@@ -737,6 +738,7 @@
 			color: var(--page-theme);
 			font-size: 22px;
 			font-family: 'Orbitron';
+			display: block;
 		}
 
 		.sidenav .closebtn {

@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta charset="UTF-8" />
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>g4o2 website</title>
+
+	<meta name="description" content="Hu Kaixiang's website">
+	<meta name="keywords" content="">
+	<meta name="author" content="Hu Kaixiang">
+
+	<meta name="robots" content="index, follow">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+	<link rel="stylesheet" href="/g4o2-website/css/animate.css" />
+
+	<link rel="apple-touch-icon" sizes="152x152" href="/g4o2-website/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/g4o2-website/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/g4o2-website/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/g4o2-website/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/g4o2-website/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta property="fb:page_id" content="">
+	<meta property="og:title" content="g4o2 website" />
+	<meta property="og:image"
+		content="https://raw.githubusercontent.com/Maxhu787/g4o2-website/main/media/0000001.jpg" />
+	<meta property="og:description" content="Hu Kaixiang's website">
+	<meta property="og:url" content="https://maxhu787.github.io" />
+	<meta property="og:site_name" content="Hu Kaixiang" />
+	<meta property="og:type" content="website" />
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://maxhu787.github.io">
+	<meta name="twitter:title" content="Hu Kaixiang">
+	<meta name="twitter:description" content="Hu Kaixiang's website">
+	<meta name="twitter:image" content="https://raw.githubusercontent.com/Maxhu787/g4o2-website/main/media/0000001.jpg">
+	<meta name="twitter:site" content="">
+
+	<script type="text/javascript" src="/g4o2-website/js/fontawesome.js"></script>
+	<script type="text/javascript" src="/g4o2-website/js/jquery-3.6.0.js"></script>
+	<script type="text/javascript" async src="/g4o2-website/js/credly-embed.js"></script>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+		@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Roboto:300|Open+Sans&display=swap');
+
+		:root {
+			--page-theme: #ffa500;
+			/*orange*/
+			--page-theme-second: #ffc200;
+			/*#ffc200*/
+			--page-theme-third: #ffee00;
+			--page-bg: rgb(41, 41, 41);
+			/*rgb(71, 71, 71)*/
+			--text-color: white;
+			/*white*/
+		}
+
+		body {
+			margin: 0px;
+			background: orange;
+			font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+			font-weight: 100;
+			overflow-x: hidden;
+			text-align: center;
+			background: url(/g4o2-website/media/0000001.jpg);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 100% 100%;
+			/*filter: blur(8px);
+					-webkit-filter: blur(8px);
+					backdrop-filter: blur(5px);*/
+			animation-name: dim;
+			animation-duration: 4s;
+		}
+
+		@keyframes dim {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+
+		* {
+			box-sizing: border-box;
+		}
+
+		a {
+			color: orange;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+
+		::-moz-selection {
+			color: grey;
+			background: orange;
+		}
+
+		::selection {
+			color: grey;
+			background: orange;
+		}
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.navbar-header {
+			background: var(--page-theme);
+			position: fixed;
+			width: 100%;
+			margin-top: -95.5px;
+			z-index: 9999;
+		}
+
+		.navbar-header::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		.logo {
+			height: 55px;
+			width: 54px;
+			border-radius: 50px;
+			float: left;
+			margin-left: -8%;
+			transition: all 0.35s ease-in-out;
+			border: solid var(--page-theme-second) 3px;
+			margin-top: 6px;
+			transition: border 0.35s ease-out;
+			/*animation-name: logo-anim;
+					animation-duration: 1.5s;*/
+		}
+
+		.logo:hover {
+			padding: 3px;
+			border: none;
+		}
+
+		#logo-text {
+			font-family: 'orbitron';
+			float: left;
+			margin-top: 24px;
+			margin-left: .4%;
+			cursor: pointer;
+		}
+
+		/*@keyframes logo-anim {
+					100% {
+						transform: rotate(360deg);
+					}
+				}*/
+
+		nav {
+			z-index: 1000;
+			float: right;
+			text-transform: uppercase;
+		}
+
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		nav li {
+			display: inline-block;
+			margin-left: 60px;
+			padding-top: 23px;
+			position: relative;
+		}
+
+		nav>ul li a {
+			color: #444;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+		nav>ul li a:hover {
+			color: #000;
+		}
+
+		nav>ul p {
+			color: var(--page-theme);
+			font-size: 16px;
+			cursor: pointer;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		nav>ul li a::before {
+			content: '';
+			display: block;
+			height: 5px;
+			background-color: #444;
+			position: absolute;
+			top: 0;
+			width: 0%;
+			transition: all ease-in-out 250ms;
+		}
+
+		nav>ul li a:hover::before {
+			width: 100%;
+		}
+
+		.dropbtn {
+			background-color: var(--page-theme);
+			padding: 16px;
+			font-size: 12px;
+			font-weight: 100;
+			border: none;
+			margin-left: 28px;
+			height: 67px;
+			width: 95px;
+			margin-right: -60px;
+		}
+
+		.dropbtn {
+			background-color: var(--page-theme);
+			padding: 16px;
+			font-size: 12px;
+			font-weight: 100;
+			border: none;
+			margin-left: 28px;
+			height: 67px;
+			width: 95px;
+			margin-right: -60px;
+		}
+
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: rgb(44, 42, 37);
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 999;
+			overflow-y: scroll;
+			float: left;
+			width: 50%;
+			height: calc(100vh - 75px);
+		}
+
+		.dropdown-content p {
+			font-size: 14px;
+		}
+
+		.dropdown-content a {
+			color: #fff;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			transition: all .01s ease-in-out;
+		}
+
+		.dropdown-content a:hover {
+			color: var(--page-theme);
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: var(--page-theme-second);
+			cursor: pointer;
+		}
+
+		.sideBar-container {
+			position: relative;
+			display: inline-block;
+			margin-left: -10px;
+		}
+
+		.sideBarItem {
+			color: black;
+			padding: 8px 16px;
+			float: left;
+			border: none;
+			outline: 0;
+			width: 100%;
+			display: block;
+			text-align: left;
+			white-space: normal;
+			float: none;
+		}
+
+		#sideBar-button {
+			z-index: 10;
+			border: none;
+			display: inline-block;
+			padding: 10px 14px;
+			vertical-align: middle;
+			overflow: hidden;
+			text-decoration: none;
+			color: #000;
+			background-color: var(--page-theme);
+			text-align: left;
+			cursor: pointer;
+			white-space: nowrap;
+			margin-right: -35px;
+			margin-top: 14px;
+			border-radius: 8px;
+		}
+
+		#sideBar-button:hover {
+			box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			background-color: rgb(71, 71, 71);
+			color: orange;
+			transition: all .3s ease-in;
+		}
+
+		#particles {
+			height: 100%;
+			z-index: -1;
+			position: fixed;
+			width: 100%;
+			margin-top: -28px;
+		}
+
+		#content-wrapper {
+			margin-top: 95px;
+		}
+
+		.cert-container {
+			background-color: rgba(0, 0, 0, .5);
+			display: inline-flex;
+			overflow-x: scroll;
+			padding: 20px;
+			width: 90%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border-radius: 8px;
+		}
+
+		.cert-container a {
+			display: inline-block;
+			width: 100%;
+		}
+
+		.cert-img {
+			/*opacity: 0.5;*/
+			height: 220px;
+			transition: width .8s;
+			transition: height .8s;
+			/*filter: blur(5px);
+					-webkit-filter: blur(5px)*/
+		}
+
+		.cert-img:hover {
+			box-shadow: 0px 0px 8px 2px #fff;
+			/*height: 400px;
+					filter: blur(0px);
+					-webkit-filter: blur(0px);*/
+			transition: all 0.1s ease-out;
+		}
+
+
+
+		.cert-wrapper {
+			padding: 50px;
+		}
+
+		#cert-header {
+			font-family: "Orbitron", "Roboto";
+			margin-top: 30px;
+			font-size: 26px;
+			color: var(--page-theme);
+			font-weight: 100;
+			text-transform: uppercase;
+			transition: all .3s ease-in-out;
+			padding-top: 30px;
+			user-select: none;
+			/*background: linear-gradient(#eee, #333);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;*/
+		}
+
+		#cert-header-two {
+			font-family: 'orbitron', "Roboto";
+			position: fixed;
+			font-size: 25px;
+			margin-left: 50px;
+			color: var(--page-theme);
+			font-weight: 100;
+			display: block;
+			transition: all .3s ease-in-out;
+		}
+
+		#about {
+			margin-top: 100px;
+			color: var(--text-color);
+			padding: 10px;
+			opacity: 0.8;
+			background-color: rgba(10, 10, 10, .65);
+		}
+
+		#about-header {
+			margin-left: 6px;
+			font-size: 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.about-img {
+			color: var(--page-theme);
+			font-size: 4em;
+			padding: 10px;
+			transition: all 0.35s ease-in-out;
+			cursor: pointer;
+		}
+
+		.about-img:hover {
+			color: var(--page-theme-third);
+			transition: 0.35s ease-out;
+		}
+
+		.header {
+			color: var(--page-theme);
+		}
+
+		#contact-header {
+			font-family: monospace;
+			font-weight: 100;
+			font-size: 20px;
+			color: black;
+			padding: 15px;
+			margin-top: 10px;
+		}
+
+		footer {
+			background-color: var(--page-bg);
+			height: 250px;
+			display: table;
+			flex-direction: column;
+			opacity: 0.8;
+			width: 100%;
+		}
+
+		footer:hover {
+			opacity: 0.9;
+		}
+
+
+		.contact-img {
+			color: var(--page-theme);
+			padding: 10px;
+			transition: all 0.25s ease-in-out;
+		}
+
+		.contact-img:hover {
+			color: var(--page-theme-third);
+			transition: 0.35s ease-out;
+		}
+
+		.fa-jsfiddle {
+			font-weight: bold;
+		}
+
+		.fa-free-code-camp {
+			font-weight: 600;
+		}
+
+		#contact {
+			background-color: var(--page-bg);
+			position: relative;
+		}
+
+		#contact-header {
+			color: var(--text-color);
+		}
+
+		#copyright-text {
+			font-size: 30px;
+			color: var(--text-color);
+			text-align: center;
+		}
+
+		#copyright {
+			height: 8%;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.8);
+			height: 100px;
+			display: fixed;
+			position: fixed;
+			bottom: 0;
+		}
+
+		.close {
+			color: var(--text-color);
+			cursor: pointer;
+			position: absolute;
+			font-size: 28px;
+			top: 50%;
+			right: 0%;
+			padding: 12px 16px;
+			transform: translate(0%, -50%);
+		}
+
+		.close:hover {
+			background: #bbb;
+		}
+
+		.classname {
+			animation-name: hideAnim;
+			animation-duration: 2000ms;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes hideAnim {
+			0% {
+				opacity: 1;
+				transform: rotateX(90deg);
+			}
+
+			50% {
+				opacity: 0.8;
+				transform: rotateX(0deg);
+			}
+
+			100% {
+				display: none;
+				opacity: 0;
+				transform: rotateX(90deg);
+			}
+		}
+
+		#announcement {
+			top: 67px;
+			width: 300px;
+			height: 50%;
+			right: 0;
+			bottom: 0;
+			background: var(--page-bg);
+			opacity: 0.8;
+			position: absolute;
+			text-transform: uppercase;
+			padding: 20px;
+		}
+
+		#topBtn {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			border: none;
+			outline: none;
+			background-color: var(--page-theme);
+			color: var(--text-color);
+			cursor: pointer;
+			padding: 8px 8px 8px 8px;
+			border-radius: 100px;
+			height: 50px;
+			width: 50px;
+			text-align: center;
+		}
+
+		#topBtn:hover {
+			background-color: var(--page-theme-second);
+		}
+
+
+		::-webkit-scrollbar {
+			width: 16px;
+			height: 16px;
+		}
+
+		::-webkit-scrollbar-corner,
+		::-webkit-scrollbar-track {
+			background-color: rgb(64, 64, 64);
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-color: rgb(96, 96, 96);
+			background-clip: padding-box;
+			border: 2px solid transparent;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background-color: rgb(112, 112, 112);
+		}
+
+		::-webkit-scrollbar-thumb:active {
+			background-color: rgb(128, 128, 128);
+		}
+
+		/* Buttons */
+		::-webkit-scrollbar-button:single-button {
+			background-color: rgb(64, 64, 64);
+
+			display: block;
+			background-size: 10px;
+			background-repeat: no-repeat;
+		}
+
+		/* Up */
+		::-webkit-scrollbar-button:single-button:vertical:decrement {
+			height: 12px;
+			width: 16px;
+			background-position: center 4px;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>");
+		}
+
+		/* Down */
+		::-webkit-scrollbar-button:single-button:vertical:increment {
+			height: 12px;
+			width: 16px;
+			background-position: center 2px;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:vertical:increment:active {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 100,0 50,50'/></svg>");
+		}
+
+		/* Left */
+		::-webkit-scrollbar-button:single-button:horizontal:decrement {
+			height: 12px;
+			width: 12px;
+			background-position: 3px 3px;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,50 50,100 50,0'/></svg>");
+
+		}
+
+		::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,50 50,100 50,0'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,50 50,100 50,0'/></svg>");
+		}
+
+		/* Right */
+		::-webkit-scrollbar-button:single-button:horizontal:increment {
+			height: 12px;
+			width: 12px;
+			background-position: 3px 3px;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 0,100 50,50'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 0,100 50,50'/></svg>");
+		}
+
+		::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 0,100 50,50'/></svg>");
+		}
+
+
+		/*::-webkit-scrollbar {
+					width: 10px;
+				}
+
+				::-webkit-scrollbar-track {
+					background: rgb(44, 42, 37);
+				}
+
+				::-webkit-scrollbar-thumb {
+					background: var(--page-theme);
+				}
+
+				::-webkit-scrollbar-thumb:hover {
+					background: var(--page-theme-second);
+				}*/
+
+		.blink {
+			animation: blinker 1.5s linear infinite;
+		}
+
+		@keyframes blinker {
+			50% {
+				opacity: 0;
+			}
+		}
+
+		/*------------sideBar------------*/
+		.sidenav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .6);
+			backdrop-filter: blur(.5rem);
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
+
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 18px;
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+		}
+
+		.sidenav a:hover {
+			color: #f1f1f1;
+		}
+
+		.sidenav p {
+			color: var(--page-theme);
+			font-size: 22px;
+			font-family: 'Orbitron';
+			display: block;
+		}
+
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 8px;
+			font-size: 36px;
+			margin-left: 50px;
+		}
+
+		/*------------sideBar------------*/
+
+		@media only screen and (max-width: 1150px) {
+			/*body {
+						color: yellow !important;
+					}*/
+
+			#hover-stat-text {
+				display: none;
+			}
+		}
+
+		@media only screen and (min-width: 694px) and (max-width: 799px) {
+			/*body {
+						color: green !important;
+					}*/
+
+			nav li {
+				margin-left: 30px !important;
+			}
+
+			.dropbtn {
+				margin-left: 0px !important;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+		}
+
+		@media only screen and (min-width: 605px) and (max-width: 694px) {
+			/*body {
+						color: red !important;
+					}*/
+
+			nav li {
+				margin-left: 15px !important;
+			}
+
+			.dropbtn {
+				margin-left: -5px;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+
+			#cert-header-two {
+				display: none;
+			}
+		}
+
+		@media only screen and (min-width: 465px) and (max-width: 605px) {
+
+			/*body {
+						color: blue !important;
+					}*/
+
+			nav ul li {
+				display: none;
+			}
+
+			nav .dropdown {
+				display: none;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+
+			#sideBar-button {
+				display: inline-block;
+			}
+
+			.cert-img {
+				height: 160px;
+			}
+
+			#cert-header-two {
+				display: none;
+			}
+		}
+
+		@media only screen and (max-width: 465px) {
+
+			/*body {
+						color: pink !important;
+					}*/
+
+			nav ul li {
+				display: none;
+			}
+
+			nav .dropdown {
+				display: none;
+			}
+
+			#hover-stat-text {
+				display: none;
+			}
+
+			#sideBar-button {
+				display: inline-block;
+				margin-right: -25px;
+			}
+
+			.cert-img {
+				height: 160px;
+				transition: all .4s ease-in-out;
+			}
+
+			.cert-wrapper {
+				padding: 30px;
+			}
+
+			#cert-header-two {
+				display: none;
+			}
+		}
+
+		.rainbow_text_animated {
+			background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+			-webkit-background-clip: text;
+			background-clip: text;
+			color: transparent !important;
+			animation: rainbow_animation 6s ease-in-out infinite;
+			background-size: 400% 100%;
+		}
+
+		@keyframes rainbow_animation {
+
+			0%,
+			100% {
+				background-position: 0 0;
+			}
+
+			50% {
+				background-position: 100% 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		$(document).ready(function () {
+			$("#logo-text").hover(function () {
+				setTimeout(
+					function () {
+						$("#logo-text").addClass("animate__hinge");
+						$('#logo-text').css('pointer-events', 'none');
+					}, 800);
+			}, function () {
+				setTimeout(
+					function () {
+						$("#logo-text").removeClass("animate__hinge");
+						$('#logo-text').css('pointer-events', 'auto');
+					}, 3000);
+			})
+		});
+		/*
+		$(window).resize(function () {
+			$("#cert-header-two").text($(window).width());
+		});
+		*/
+	</script>
+	<header class="navbar-header">
+		<div class="container">
+			<div class="logo-container">
+				<a class="logo-header" href="/g4o2-website/about.html">
+					<img class="logo" alt="logo" src="/g4o2-website/media/111(smaller version).jpg">
+				</a>
+				<p id="logo-text">Hu Kaixiang 胡凱翔</p>
+			</div>
+			<nav>
+				<ul id="main-nav">
+					<li><a href="#main" id="hover-stat">Welcome</a></li>
+					<li><a href="#contact">Social Media
+						</a></li>
+					<div class="dropdown">
+						<button class="dropbtn">PAGES</button>
+						<div class="dropdown-content">
+							<p>Social Media</p>
+							<a href="https://github.com/Maxhu787">github</a>
+							<a href="https://github.com/g4o2">g4o2 organization</a>
+							<a href="https://discord.com/invite/UxNjRrT6RY/">discord server</a>
+							<a href="https://www.facebook.com/profile.php?id=100075737822439">facebook</a>
+							<a href="https://www.instagram.com/hukaixiang1024/">instagram</a>
+							<a href="https://www.youtube.com/channel/UCWXyRHqr9zS5oqzmR2tVHtQ">youtube</a>
+							<a href="https://www.linkedin.com/in/kaixiang-hu-6ab83a237/">linkedin</a>
+							<a href="https://twitter.com/hu_kaixiang">twitter</a>
+							<a href="https://www.freecodecamp.org/maxhu">freecodecamp</a>
+							<a href="mailto:maxhu787@gmail.com">Email (main)</a>
+							<a href="mailto:g4o2@protonmail.com">Email (2)</a>
+							<a href="mailto:g4o3@protonmail.com">Email (3)</a>
+							<a href="mailto:maxhu878@gmail.com">Email (4)</a>
+							<p>Other sites</p>
+							<a href="https://php-sql-chat.maxhu787.repl.co">g4o2</a>
+							<!--<a href="/mcpi-player-skin-editor/index.html">3d mcpi editor</a>
+							<a href="https://pigames-server.github.io/">PIGAMES Server</a>-->
+							<a href="https://maxhu787.github.io/Planet/">Planet launcher website</a>
+							<a href="https://maxhu787.github.io/Goofle/">Goofle</a>
+							<p>pages</p>
+							<a href="https://maxhu787.github.io/g4o2-react-website">React JS version (unfinished)</a>
+							<a href="/g4o2-website/threejs/4.html">Three js Reflective sphere</a>
+							<a href="/g4o2-website/particles/index.html">Particle js Test</a>
+							<a href="/g4o2-website/threejs/index.html">ThreeJS test 1</a>
+							<a href="/g4o2-website/threejs/2.html">ThreeJS test 2</a>
+							<a href="/g4o2-website/threejs/3.html">ThreeJS test 3</a>
+							<a href="/g4o2-website/g4o2_ascii.html">g4o2_ascii</a>
+							<!--<a href="/g4o2-website/guessing-game/guessinggame.html">guessing game</a>
+							<a href="/g4o2-website/media-in-browser/video-playing.html">Video player</a>
+							<a href="/g4o2-website/media-in-browser/index.html">media test</a>-->
+							<a href="/g4o2-website/random-word-gen/index.html">test</a>
+							<!--<a href="/g4o2-website/test/yt-api.html">YouTube api</a>
+							<a href="/g4o2-website/wallee/walle.html">Wallee</a>-->
+							<!--<a href="/g4o2-website/tables/index.html">testing stuff</a>
+							<p>PHP pages (won't work)</p>
+							<a href="/g4o2-website/crud/index.php">Database</a>
+							<a href="/g4o2-website/autosess-v2/index.php">db Login test</a>
+							<a href="/g4o2-website/crack/index.php" title="cracking (kind of)">MD5 cracking</a>
+							<a href="/g4o2-website/php-stuff/random.php">Random stuff</a>
+							<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
+							<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
+							<a href="/g4o2-website/crud/index.php">Test login</a>-->
+						</div>
+					</div>
+					<button id="sideBar-button" onclick="openNav()">☰</button>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div id="mySidenav" style="z-index: 999999;" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#about">About</a>
+		<a href="#contact">Social&nbsp;Media</a>
+		<p>Social Media</p>
+		<a href="https://github.com/Maxhu787">github</a>
+		<a href="https://github.com/g4o2">g4o2 organization</a>
+		<a href="https://discord.com/invite/UxNjRrT6RY/">discord server</a>
+		<a href="https://www.facebook.com/profile.php?id=100075737822439">facebook</a>
+		<a href="https://www.instagram.com/hukaixiang1024/">instagram</a>
+		<a href="https://www.youtube.com/channel/UCWXyRHqr9zS5oqzmR2tVHtQ">youtube</a>
+		<a href="https://www.linkedin.com/in/kaixiang-hu-6ab83a237/">linkedin</a>
+		<a href="https://twitter.com/hu_kaixiang">twitter</a>
+		<a href="https://www.freecodecamp.org/maxhu">freecodecamp</a>
+		<a href="mailto:maxhu787@gmail.com">Email (main)</a>
+		<a href="mailto:g4o2@protonmail.com">Email (2)</a>
+		<a href="mailto:g4o3@protonmail.com">Email (3)</a>
+		<a href="mailto:maxhu878@gmail.com">Email (4)</a>
+		<p>Other sites</p>
+		<a href="https://php-sql-chat.maxhu787.repl.co">g4o2</a>
+		<!--<a href="/mcpi-player-skin-editor/index.html">3d mcpi editor</a>
+									<a href="https://pigames-server.github.io/">PIGAMES Server</a>-->
+		<a href="https://maxhu787.github.io/Planet/">Planet launcher website</a>
+		<a href="https://maxhu787.github.io/Goofle/">Goofle</a>
+		<p>pages</p>
+		<a href="https://maxhu787.github.io/g4o2-react-website">React JS version (unfinished)</a>
+		<a href="/g4o2-website/threejs/4.html">Three js Reflective sphere</a>
+		<a href="/g4o2-website/particles/index.html">Particle js Test</a>
+		<a href="/g4o2-website/threejs/index.html">ThreeJS test 1</a>
+		<a href="/g4o2-website/threejs/2.html">ThreeJS test 2</a>
+		<a href="/g4o2-website/threejs/3.html">ThreeJS test 3</a>
+		<a href="/g4o2-website/g4o2_ascii.html">g4o2_ascii</a>
+		<!--<a href="/g4o2-website/guessing-game/guessinggame.html">guessing game</a>
+		<a href="/g4o2-website/media-in-browser/video-playing.html">Video player</a>
+		<a href="/g4o2-website/media-in-browser/index.html">media test</a>-->
+		<a href="/g4o2-website/random-word-gen/index.html">test</a>
+		<!--<a href="/g4o2-website/test/yt-api.html">YouTube api</a>
+		<a href="/g4o2-website/wallee/walle.html">Wallee</a>-->
+		<!--<a href="/g4o2-website/tables/index.html">testing stuff</a>
+		<p>PHP pages (won't work)</p>
+		<a href="/g4o2-website/crud/index.php">Database</a>
+		<a href="/g4o2-website/autosess-v2/index.php">db Login test</a>
+		<a href="/g4o2-website/crack/index.php" title="cracking (kind of)">MD5 cracking</a>
+		<a href="/g4o2-website/php-stuff/random.php">Random stuff</a>
+		<a href="/g4o2-website/rps/index.php">rock paper scissors</a>
+		<a href="/g4o2-website/autos/">PHP &amp; SQL</a>
+		<a href="/g4o2-website/crud/index.php">Test login</a>-->
+	</div>
+	<main id="main">
+		<div id="content-wrapper">
+			<section>
+				<div id="particles"></div>
+			</section>
+			<section id="certifications">
+				<p id="cert-header">
+					HU KAI-XIANG
+				</p>
+				<script>
+					/*autoplay = true
+					document.getElementById("background-music"); 
+					window.addEventListener('click', (event) => {
+						if(autoplay === true) {
+							document.getElementById("background-music").play();
+							autoplay = false;
+						}
+					});
+					function toggleMusic() {
+						if(document.getElementById("background-music").paused === false) {
+							document.getElementById("background-music").pause();
+							document.getElementById("background-music-control").innerHTML = '<i class="fa-regular fa-volume"></i>';
+						} else if(document.getElementById("background-music").paused === true) {
+							document.getElementById("background-music").play();
+							document.getElementById("background-music-control").innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+						}
+					}*/
+				</script>
+				<style>
+					#background-music-control {
+						display: block;
+						position: fixed;
+						bottom: 80px;
+						right: 30px;
+						z-index: 99;
+						border: none;
+						outline: none;
+						background-color: var(--page-theme);
+						color: var(--text-color);
+						cursor: pointer;
+						padding: 8px 8px 8px 8px;
+						border-radius: 100px;
+						height: 50px;
+						width: 50px;
+						text-align: center;
+					}
+				</style>
+				<!--<audio id="background-music" loop autoplay src="./media/GitHub-Skyline.mp3" type="audio/mp3"></audio>
+				<button onclick="toggleMusic()" id="background-music-control">
+					<i class="fa-solid fa-volume-xmark"></i>
+				</button>-->
+				<marquee style="display: none" behavior="scroll" direction="left" scrollamount="12" class="blink">hidden
+				</marquee>
+				<!-- <h3 id="cert-header-two">CERTIFICATIONS</h3> -->
+				<section>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-30.html"><img class="cert-img"
+									src="/g4o2-website/certifications/CERTIFICATE OF PARTICIPATION group 7-9.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-3.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Responsive web design certification.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-2.html"><img class="cert-img"
+									src="/g4o2-website/certifications/JavaScript-Algorithms-and-Data-Structures.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-4.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Front End Development Libraries.PNG"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-5.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Scientific Computing with Python.PNG"
+									alt="certification"></a>
+						</div>
+					</div>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-1.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Web Applications for Everybody Specialization.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-8.html"><img class="cert-img"
+									src="/g4o2-website/certifications/building-web-applications-in-php.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-9.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Introduction to Structured Query Language (SQL).png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-12.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Building Database Applications in PHP.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-13.html"><img class="cert-img"
+									src="/g4o2-website/certifications/JavaScript, jQuery, and JSON.png"
+									alt="certification"></a>
+						</div>
+					</div>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-23.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Web Design for Everybody Specialization.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-10.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Introduction to HTML5.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-14.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Introduction to CSS3.png" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-18.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Interactivity with JavaScript.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-20.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Advanced Styling with Responsive Design.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-22.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Web Design for Everybody Capstone.png"
+									alt="certification"></a>
+						</div>
+					</div>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-7.html"><img class="cert-img"
+									src="/g4o2-website/certifications/programming-for-everybody(getting-started-with-python).png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-6.html"><img class="cert-img"
+									src="/g4o2-website/certifications/python-data-stuctures.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-11.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Using Python to Access Web Data.png"
+									alt="certification"></a>
+						</div>
+					</div>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-25.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Maxhu787 - Python.png" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-15.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Getting Started with Git and GitHub.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-16.html"><img class="cert-img"
+									src="/g4o2-website/certifications/SQL for Data Science.png" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-24.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Introduction to Front-End Development.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-17.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Introduction to Back-End Development.png"
+									alt="certification"></a>
+						</div>
+					</div>
+					<div class="cert-container">
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-27.html"><img class="cert-img"
+									src="/g4o2-website/certifications/sql_basic certificate.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-28.html"><img class="cert-img"
+									src="/g4o2-website/certifications/sql_intermediate certificate.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-29.html"><img class="cert-img"
+									src="/g4o2-website/certifications/css certificate.png" alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-21.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Web Application Technologies and Django.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-19.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Internet History, Technology, and Security.png"
+									alt="certification"></a>
+						</div>
+						<div class="cert-wrapper">
+							<a href="/g4o2-website/certifications/cert-26.html"><img class="cert-img"
+									src="/g4o2-website/certifications/Database Design and Basic SQL in PostgreSQL.png"
+									alt="certification"></a>
+						</div>
+					</div>
+				</section>
+				<section id="badges">
+					<div class="badge badge-1" id="badge-1" data-iframe-width="150" data-iframe-height="270"
+						data-share-badge-id="0ebeaaeb-fbed-4794-b9e9-43cee08484bf"
+						data-share-badge-host="https://www.credly.com"></div>
+					<div data-iframe-width="150" data-iframe-height="270"
+						data-share-badge-id="b9525212-b74e-4027-9256-b65ca92b6711"
+						data-share-badge-host="https://www.credly.com"></div>
+				</section>
+			</section>
+			<section hidden id="announcements">
+				<div id="announcement">Announcements</div>
+			</section>
+			</section>
+			<article id="about">
+				<header id="about-header" class="header">MORE ABOUT ME</header>
+				<div style="margin-top: 10px;">
+					I
+					am&nbsp;a<!--<span style="color: green; padding: 5px; background-color: rgba(0, 0, 0, 0.6); border-radius: 2px;">-->
+					<div style="display:inline" id="myAge">14</div><!--</span>-->-year-old&nbsp;kid
+					that&nbsp;is&nbsp;intrested in&nbsp;programming
+				</div>
+				<p style="user-select: none;">
+					<i class="about-img fa-brands fa-html5 fa-2x"></i>
+					<i class="about-img fa-brands fa-css3-alt fa-2x"></i>
+					<i class="about-img fa-brands fa-js-square fa-2x"></i>
+					<i class="about-img fa-brands fa-react fa-2x"></i>
+					<i class="about-img fa-brands fa-node-js fa-2x"></i>
+					<i class="about-img fa-brands fa-python fa-2x"></i>
+					<i class="about-img fa-brands fa-php fa-2x"></i><br />
+					<object id="sql-logo" data="/g4o2-website/media/graphql.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/vscode.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/mysql.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/jquery.svg"></object>
+					<object id="sql-logo" data="/g4o2-website/media/postgresql.svg"></object>
+				</p>
+
+			</article>
+			<!--<article id="github-profile">
+				<header id="about-header" class="header">GITHUB PROFILE STATS</header>
+				<p text-align="center"><a target="_blank" href="https://github.com/maxhu787"><img src="https://img.shields.io/github/followers/maxhu787.svg?style=social&label=Follow%20Me" width="125"></a>
+				</p>
+				<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=maxhu787&theme=react&bg_color=0D1117&layout=compact&langs_count=7"
+					alt="Languages">
+				<img src="https://github-readme-stats.vercel.app/api?username=maxhu787&show_icons=true&theme=react&bg_color=0D1117"
+					alt="Github stats">
+				<img src="https://github-readme-streak-stats.herokuapp.com/?user=maxhu787&theme=react&hide_border=true"
+					alt="Github stats"><br />
+				<img src="https://github-profile-trophy.vercel.app/?username=maxhu787&theme=matrix" alt="Github stats"><br />
+				<img style="width: 800px;" src="https://activity-graph.herokuapp.com/graph?username=maxhu787&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" />
+				<p style="font-family: 'orbitron'; color: #fff;">Test portfolio website</p>
+			</article>-->
+		</div>
+	</main>
+	<footer>
+		<section id="contact">
+			<header id="contact-header" class="header">Social Media</header>
+			<a id="contact-link" href="https://github.com/Maxhu787" target="_blank" title="GitHub Profile">
+				<i alt="github" class="contact-img fa-brands fa-github-square fa-3x"></i>
+			</a>
+			<a id="contact-link" href="https://www.instagram.com/hukaixiang1024/" target="_blank"
+				title="Ingstagram Profile">
+				<i alt="ig" class="contact-img fa-brands fa-instagram-square fa-3x"></i>
+			</a>
+			<a id="contact-link" href="https://www.linkedin.com/in/kaixiang-hu-6ab83a237/" target="_blank"
+				title="Linkedin Profile">
+				<i alt="linkedin" class="contact-img fa-brands fa-linkedin fa-3x"></i>
+			</a>
+			<a id="contact-link" href="https://twitter.com/hu_kaixiang" target="_blank" title="Twitter Account">
+				<i alt="twitter" class="contact-img fa-brands fa-twitter-square fa-3x"></i>
+			</a>
+			<a id="contact-link" href="https://discord.com/invite/UxNjRrT6RY/" target="_blank" title="Discord Server">
+				<i alt="discord" class="contact-img fa-brands fa-discord fa-3x"></i>
+			</a>
+			<a id="contact-link" href="https://www.freecodecamp.org/Maxhu" target="_blank" title="Freecodcamp Profile">
+				<i alt="FCC" class="contact-img fa-brands fa-free-code-camp fa-3x"></i>
+			</a>
+			<div id="copyright" style="display: none;">
+				<p id="copyright-text">
+					Test Website
+				</p>
+				<span onclick="loadAnimation()" class="close">&times;</span>
+			</div>
+		</section>
+		<p style="user-select: none;color: rgb(153, 157, 162);">Copyright © <span id="copyright-year">2000</span> g4o2.
+			All Rights Reserved.</p>
+		<script>document.getElementById('copyright-year').innerText = new Date().getFullYear()</script>
+		<!--<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+			<img 
+			alt="Creative Commons License" 
+			style="border-width:0" 
+			src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+		</a><br />This work is
+		licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons
+			Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+		-->
+	</footer>
+	<button onclick="topFunction()" id="topBtn" title="Go to the top"><img src="/g4o2-website/media/up-arrow.svg"
+			style="height: 20px;"></button>
+	<script src="/g4o2-website/js/particles.js"></script>
+	<script>
+		var age, daysBetweenDates;
+		daysBetweenDates = function (d1, d2) {
+			var diffDays, oneDay;
+			oneDay = 24 * 60 * 60 * 1000;
+			diffDays = (d2 - Date.parse(d1)) / oneDay;
+			return diffDays;
+		};
+
+		age = function () {
+			$('#myAge').text((daysBetweenDates('Feb 7, 2009 00:00:00', new Date()) / 365).toFixed(8));
+		};
+		setInterval(age, 500);
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			//scroll to top at refresh / start
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: 'smooth'
+			});
+			particlesJS.load('particles', '/g4o2-website/particle.json', function () {
+				console.log('particlesJS loaded');
+			})
+			/*let mainTheme = window.prompt("Theme (Enter color)");
+			let mainThemeSecond = window.prompt("Second theme");
+			let backgroundTheme = window.prompt("Background color");
+			let textColor = window.prompt("Text color");
+			document.documentElement.style.setProperty('--page-theme', mainTheme);
+			document.documentElement.style.setProperty('--page-theme-second', mainThemeSecond);
+			document.documentElement.style.setProperty('--page-bg', backgroundTheme);
+			document.documentElement.style.setProperty('--text-color', textColor);*/
+		});
+	</script>
+	<script>
+		const hoverText = document.getElementById('hover-stat');
+		const hoverStatText = document.getElementById('hover-stat-text');
+		let topBtn = document.getElementById("topBtn");
+		hoverStat = false;
+		window.onscroll = function () {
+			hoverText.innerHTML = Math.round(window.pageYOffset);
+			//console.log(window.innerHeight, window.pageYOffset, document.body.offsetHeight);
+			/*if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+				hoverStatText.innerHTML = ('Bottom');
+				document.getElementById('cert-header-two').style.opacity = '0';
+			} else if (window.pageYOffset <= 1) {
+				hoverStatText.innerHTML = ('Top');
+			} else {
+				document.getElementById('cert-header-two').style.opacity = '1';
+			}*/
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				topBtn.style.display = "block";
+			} else {
+				topBtn.style.display = "none";
+			}
+			if (window.pageYOffset >= 10) {
+				document.getElementById('cert-header').style.opacity = '0';
+			} else {
+				document.getElementById('cert-header').style.opacity = '1';
+			}
+		}
+		//top btn
+		function topFunction() {
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: 'smooth'
+			});
+		}
+		//smooth scrolling
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+		const copyright = document.getElementById('copyright');
+		const copyrightText = document.getElementById('copyright-text');
+		let oldValue = 0
+		let newValue = 0
+		window.addEventListener('scroll', (e) => {
+			newValue = window.pageYOffset;
+			if (oldValue < newValue) {
+				/*console.log("Up");
+			copyright.style.backgroundColor = "white";*/
+			} else if (oldValue > newValue) {
+				/*console.log("Down");*/
+			}
+			oldValue = newValue;
+		});
+		//load animation btn
+		var closebtns = document.getElementsByClassName("close");
+		for (let i = 0; i < closebtns.length; i++) {
+			closebtns[i].addEventListener("click", function () {
+				/*this.parentElement.style.display = 'none';*/
+			});
+		}
+		function loadAnimation() {
+			copyright.className = 'classname';
+		}
+
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "100%"/*"250px"*/;
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+	</div>
+</body>
+
+</html>

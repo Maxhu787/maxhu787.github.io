@@ -12,6 +12,21 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((elem) => observer.observe(elem))
 
+const observerCert = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry)
+    if (entry.isIntersecting) {
+      entry.target.classList.add('cert-show');
+    } else {
+      entry.target.classList.remove('cert-show');
+    }
+  })
+})
+
+const hiddenCerts = document.querySelectorAll('.cert-hidden');
+hiddenCerts.forEach((elem) => observerCert.observe(elem))
+
+
 var age, daysBetweenDates;
 daysBetweenDates = function (d1, d2) {
   var diffDays, oneDay;

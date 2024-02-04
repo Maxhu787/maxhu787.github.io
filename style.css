@@ -34,6 +34,44 @@ body {
   animation-fill-mode: forwards;
 }
 
+.typing-container {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+#feature-text {
+  margin-left: 8px;
+}
+
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 40px;
+  background-color: #000;
+  margin-left: 2px;
+  margin-top: 6px;
+  animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes fade-in {
   100% {
     opacity: 1;
@@ -126,6 +164,7 @@ body {
   .hidden {
     transition: none;
   }
+
   .cert-hidden {
     transition: none;
   }
@@ -186,8 +225,8 @@ body {
 
 @media (max-width: 1220px) {
   .programming-language {
-      width: 16% !important;
-    }
+    width: 16% !important;
+  }
 }
 
 @media (max-width: 990px) {

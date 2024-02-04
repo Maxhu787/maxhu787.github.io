@@ -87,6 +87,10 @@ body {
   margin-left: 20px;
 }
 
+.cert-grid {
+  padding: 20px;
+}
+
 .cert-grid-container {
   display: grid;
   place-items: center;
@@ -94,13 +98,14 @@ body {
   min-height: 100vh;
   width: 100%;
   gap: 10px;
-  border-bottom: solid 3px #ffa500;
+  /* border-bottom: solid 3px #ffa500; */
   grid-template-columns: auto auto auto;
-  background-color: #ffa500;
+  /* background-color: #ffa500; */
 }
 
 .cert-grid-container img {
   width: 100%;
+  border-radius: 8px;
 }
 
 .cert-hidden {
@@ -193,7 +198,9 @@ body {
 
 @media (max-width: 520px) {
   .programming-language {
-    width: 20% !important;
+    width: 25% !important;
+    margin: 5 !important;
+    background-color: red !important;
   }
 }
 

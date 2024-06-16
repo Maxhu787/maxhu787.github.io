@@ -197,7 +197,48 @@ body {
   font-size: 40px;
   font-family: 'Manrope';
 }
+/*-----------------------*/
+.typing-container {
+  /* display: flex; */
+  display: inline-block;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 30px;
+  max-height: 30px;
+  margin-left: -8px;
+}
 
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 31px;
+  margin-top: 2px;
+  margin-left: 0;
+  background-color: black;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.input-cursor {
+  animation: blink .6s linear infinite alternate;
+}
+/*-----------------------*/
 #header p {
   /* age */
   margin-top: 30px;
@@ -214,7 +255,7 @@ body {
   margin-right: 40px;
   margin-top: 30px;
   border: 7px solid #ffc200;
-  animation: logo-breath 5s ease-out infinite normal;
+  /* animation: logo-breath 6s ease-out infinite normal; */
 }
 
 @media (max-width: 400px) {
@@ -251,7 +292,7 @@ body {
   color: #000;
   font-size: 38px;
   display: inline-block;
-  padding: 8px 12px;
+  padding: 2px 12px 14px 12px;
   text-decoration: none;
 }
 

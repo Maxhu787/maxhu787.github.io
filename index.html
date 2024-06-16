@@ -21,7 +21,7 @@
 
   <meta property="og:url" content="https://maxhu787.github.io/">
   <meta property="og:image"
-    content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.jpg">
+    content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png">
   <meta property="og:description" content="Hu Kaixiang's portfolio website">
   <meta property="og:title" content="Hu Kaixiang">
   <meta property="og:site_name" content="Hu Kaixiang">
@@ -29,14 +29,14 @@
 
   <meta itemprop="name" content="Hu Kaixiang">
   <meta itemprop="description" content="Hu Kaixiang's portfolio website">
-  <meta itemprop="image" content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.jpg">
+  <meta itemprop="image" content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:url" content="https://maxhu787.github.io/">
   <meta name="twitter:title" content="Hu Kaixiang">
   <meta name="twitter:description" content="Hu Kaixiang's portfolio website">
   <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.jpg">
+    content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png">
 
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
@@ -54,10 +54,16 @@
 
 <body>
   <header class="hidden" id="header">
-    <img id="g4o2" class="hidden" style="transition-delay: 1000ms;" src="./assets/images/hu-kaixiang.jpeg">
-    <h1 class="hidden" style="transition-delay: 200ms;">Hu&nbsp;<span style="color: #ffa500 !important;">Kaixiang</span>
+    <img id="g4o2" class="hidden" style="transition-delay: 1000ms;" src="./assets/images/hu-kaixiang.jpg">
+    <h1 class="hidden" style="transition-delay: 200ms;">
+      <!-- Hu&nbsp;<span style="color: #ffa500 !important;">Kaixiang</span> -->
+    <div class="typing-container">
+      <span id="feature-text"></span>
+      <span class="input-cursor"></span>
+    </div>
     </h1>
-    <h2 class="hidden" style="transition-delay: 400ms;">WEB&nbsp;DEVELOPMENT, SOFTWARE&nbsp;ENGINEERING</h2>
+    <!-- <h2 class="hidden" style="transition-delay: 400ms;">WEB&nbsp;DEVELOPMENT, SOFTWARE&nbsp;ENGINEERING</h2> -->
+    <h2 class="hidden" style="transition-delay: 400ms;">CODE&nbsp;ENTHUSIAST, HIGHSCHOOL&nbsp;STUDENT</h2>
     <p class="hidden" style="transition-delay: 600ms;">Age <span id="myAge">14</span></p>
     <section id="socials">
       <a class="hidden" href="https://github.com/Maxhu787" target="_blank"><i
@@ -135,9 +141,10 @@
         <h2>Project 2</h2>
         <p>This is a description of my third project.</p>
       </div>
-    </section> -->
-    <section class="hidden projects cert-grid">
-      <!-- <h2>Certificates</h2> -->
+      </section> -->
+      <section class="projects cert-grid">
+      <!-- <section class="hidden projects cert-grid"> -->
+        <!-- <h2>Certificates</h2> -->
       <div class="cert-grid-container">
         <div class="cert-hidden">
           <img src="./assets/images/freecodecamp/Responsive Web Design.PNG">

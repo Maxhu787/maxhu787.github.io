@@ -92,6 +92,8 @@ body {
   align-content: center;
   min-height: 100vh;
   border-bottom: solid 3px #ffa500;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .project-container {
@@ -187,15 +189,27 @@ body {
   padding: 80px;
   border-bottom: solid 3px #ffa500;
   background-image: url('./assets/svg/wave-haikei.svg');
-  background-color: #fff;
+  /* background-color: #fff; */
   background-size: cover;
 }
 
+#particles-js {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  margin-top: -28px;
+  min-height: 100vh;
+}
+
 #header h1 {
-  margin-top: 40px;
+  margin-top: 20px;
   vertical-align: top;
   font-size: 40px;
   font-family: 'Manrope';
+}
+
+#header h2 {
+  margin-top: -18px;
 }
 /*-----------------------*/
 .typing-container {
@@ -248,12 +262,12 @@ body {
 }
 
 #header #g4o2 {
-  height: 210px;
-  width: 210px;
+  height: 230px;
+  width: 230px;
   border-radius: 1000px;
   float: left;
   margin-right: 40px;
-  margin-top: 30px;
+  margin-top: 18px;
   border: 7px solid #ffc200;
   /* animation: logo-breath 6s ease-out infinite normal; */
 }
@@ -408,9 +422,9 @@ footer {
 
 @keyframes logo-breath {
   0% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
   }
 
   25% {
@@ -420,15 +434,15 @@ footer {
   }
 
   60% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
   }
 
   100% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
   }
 }
 

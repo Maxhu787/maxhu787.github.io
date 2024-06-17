@@ -101,3 +101,7 @@ function updateFontColor(eleRef, color) {
 function waitForMs(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+particlesJS.load('particles-js', 'assets/particles.json', function () {
+  console.log('callback - particles.js config loaded');
+});

@@ -56,7 +56,7 @@ const carouselText = [
 ];
 
 document.addEventListener("DOMContentLoaded", async function () {
-  carousel(carouselText, "#feature-text");
+  carousel(carouselText, "#typing-container-text");
 });
 
 async function typeSentence(sentence, eleRef, delay = 100) {

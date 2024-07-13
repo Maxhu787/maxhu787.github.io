@@ -1,6 +1,6 @@
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
+    // console.log(entry)
     if(entry.isIntersecting) {
       entry.target.classList.add('show');
     } else {
@@ -14,7 +14,7 @@ hiddenElements.forEach((elem) => observer.observe(elem))
 
 const observerCert = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
+    // console.log(entry)
     if (entry.isIntersecting) {
       entry.target.classList.add('cert-show');
     } else {
@@ -102,6 +102,6 @@ function waitForMs(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-particlesJS.load('particles-js', 'assets/particles.json', function () {
-  console.log('callback - particles.js config loaded');
-});
+// particlesJS.load('particles-js', 'assets/particles.json', function () {
+  // console.log('callback - particles.js config loaded');
+// });

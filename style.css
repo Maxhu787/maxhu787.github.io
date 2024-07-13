@@ -99,7 +99,7 @@ body {
   border-radius: 1000px;
   float: left;
   margin-right: 40px;
-  margin-top: 18px;
+  margin-top: 14px;
   border: 7px solid var(--secondary);
   /* animation: logo-breath 6s ease-out infinite normal; */
 }
@@ -213,6 +213,10 @@ body {
   padding: 20px 80px 20px 80px;
 }
 
+.cert-grid h2 {
+  color: var(--primary)
+}
+
 .cert-grid-container {
   display: grid;
   place-items: center;
@@ -271,7 +275,7 @@ body {
 footer {
   border-top: solid 3px var(--primary);
   text-align: center;
-  padding: 40px;
+  padding: 25px;
   background-color: var(--background);
   color: var(--placeholder-text);
 }

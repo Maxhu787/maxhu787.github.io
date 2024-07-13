@@ -99,7 +99,7 @@ body {
   border-radius: 1000px;
   float: left;
   margin-right: 40px;
-  margin-top: 14px;
+  margin-top: 18px;
   border: 7px solid var(--secondary);
   /* animation: logo-breath 6s ease-out infinite normal; */
 }

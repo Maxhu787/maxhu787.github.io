@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Manrope&family=Orbitron&family=Noto+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Manrope&family=Orbitron&family=Noto+Sans&display=swap");
 
 :root {
   --light: #000;
   --dark: #fff;
   --background: #000;
-  --primary: #ffa500;
+  --primary: #ffc200;
   --secondary: #ffc200;
   --placeholder-text: #888;
 }
@@ -12,7 +12,7 @@
 body {
   background-color: var(--background);
   color: var(--dark);
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   padding: 0;
   margin: 0;
   opacity: 0;
@@ -50,7 +50,7 @@ body {
   margin-top: 2px;
   margin-left: 0;
   background-color: var(--dark);
-  animation: blink .6s linear infinite alternate;
+  animation: blink 0.6s linear infinite alternate;
 }
 
 @keyframes blink {
@@ -72,7 +72,7 @@ body {
   min-height: 100vh;
   padding: 80px;
   border-bottom: solid 3px var(--primary);
-  background-image: url('./assets/svg/wave-haikei.svg');
+  background-image: url("./assets/svg/wave-haikei.svg");
   background-size: cover;
 }
 
@@ -80,7 +80,7 @@ body {
   margin-top: 20px;
   vertical-align: top;
   font-size: 40px;
-  font-family: 'Manrope';
+  font-family: "Manrope";
 }
 
 #header h2 {
@@ -103,9 +103,21 @@ body {
   border: 7px solid var(--secondary);
 }
 
-@media (max-width: 2000px) and (min-width: 1400px) {
+@media (min-width: 1900px) {
   #header {
-    padding: 80px 250px 80px 250px;
+    padding: 100px 25vw 80px 25vw;
+  }
+}
+
+@media (max-width: 1900px) and (min-width: 1700px) {
+  #header {
+    padding: 100px 400px 80px 400px;
+  }
+}
+
+@media (max-width: 1700px) and (min-width: 1400px) {
+  #header {
+    padding: 100px 300px 80px 300px;
   }
 }
 
@@ -136,7 +148,7 @@ body {
 
 #socials a:hover {
   color: var(--primary);
-  transition: color .1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
 #socials:nth-child(2) {
@@ -209,7 +221,7 @@ body {
   }
 }
 
-@media (max-width: 2000px) and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .programming-language {
     width: 80%;
   }
@@ -220,7 +232,7 @@ body {
 }
 
 .cert-grid h2 {
-  color: var(--primary)
+  color: var(--primary);
 }
 
 .cert-grid-container {
@@ -253,7 +265,7 @@ body {
 .cert-grid-container img {
   width: 100%;
   border-radius: 8px;
-  transition: ease-in .15s;
+  transition: ease-in 0.15s;
 }
 
 .cert-grid-container img:hover {
@@ -362,7 +374,6 @@ footer {
   width: 12px;
   background-position: 3px 3px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,50 50,100 50,0'/></svg>");
-
 }
 
 ::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {

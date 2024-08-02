@@ -1,161 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hu Kaixiang</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hu Kaixiang</title>
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="description" content="Hu Kaixiang's portfolio website" />
+    <meta
+      name="keywords"
+      content="portfolio website, personal website, hu kaixiang, g4o2, maxhu, maxhu787"
+    />
+    <link rel="author" href="https://github.com/Maxhu787/" />
+    <link rel="canonical" href="https://maxhu787.github.io/" />
 
-  <meta name="description" content="Hu Kaixiang's portfolio website">
-  <meta name="keywords" content="portfolio website, personal website, hu kaixiang, g4o2, maxhu, maxhu787">
-  <link rel="author" href="https://github.com/Maxhu787/" />
-  <link rel="canonical" href="https://maxhu787.github.io/" />
+    <meta property="og:url" content="https://maxhu787.github.io/" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png"
+    />
+    <meta property="og:description" content="Hu Kaixiang's portfolio website" />
+    <meta property="og:title" content="Hu Kaixiang" />
+    <meta property="og:site_name" content="Hu Kaixiang" />
+    <meta property="og:see_also" content="https://github.com/Maxhu787/" />
 
-  <meta property="og:url" content="https://maxhu787.github.io/">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png">
-  <meta property="og:description" content="Hu Kaixiang's portfolio website">
-  <meta property="og:title" content="Hu Kaixiang">
-  <meta property="og:site_name" content="Hu Kaixiang">
-  <meta property="og:see_also" content="https://github.com/Maxhu787/">
+    <meta itemprop="name" content="Hu Kaixiang" />
+    <meta itemprop="description" content="Hu Kaixiang's portfolio website" />
+    <meta
+      itemprop="image"
+      content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png"
+    />
 
-  <meta itemprop="name" content="Hu Kaixiang">
-  <meta itemprop="description" content="Hu Kaixiang's portfolio website">
-  <meta itemprop="image" content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://maxhu787.github.io/" />
+    <meta name="twitter:title" content="Hu Kaixiang" />
+    <meta
+      name="twitter:description"
+      content="Hu Kaixiang's portfolio website"
+    />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png"
+    />
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://maxhu787.github.io/">
-  <meta name="twitter:title" content="Hu Kaixiang">
-  <meta name="twitter:description" content="Hu Kaixiang's portfolio website">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/Maxhu787/hu-kaixiang/main/assets/images/shrug.png">
+    <link rel="stylesheet" href="style.css" />
+    <script src="particles.js"></script>
+    <script defer src="app.js"></script>
+    <script
+      defer
+      src="./assets/fontawesome-free-6.4.0-web/js/all.min.js"
+    ></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-L3WY0F5N6N"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <link rel="stylesheet" href="style.css">
-  <script src="particles.js"></script>
-  <script defer src="app.js"></script>
-  <script defer src="./assets/fontawesome-free-6.4.0-web/js/all.min.js"></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L3WY0F5N6N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    gtag("config", "G-L3WY0F5N6N");
+  </script>
 
-  gtag('config', 'G-L3WY0F5N6N');
-</script>
-
-<body>
-  <!-- <div id="particles-js"></div> -->
-  <header class="hidden" id="header">
-    <img id="profile-picture" class="hidden" style="transition-delay: 1000ms;" src="./assets/images/hu-kaixiang.jpg">
-    <h1 class="hidden" style="transition-delay: 200ms;">
-      Hu&nbsp;<span style="color: #ffa500 !important;">Kaixiang</span>
-    <!--
+  <body>
+    <!-- <div id="particles-js"></div> -->
+    <header class="hidden" id="header">
+      <img
+        id="profile-picture"
+        class="hidden"
+        style="transition-delay: 1000ms"
+        src="./assets/images/hu-kaixiang.jpg"
+      />
+      <h1 class="hidden" style="transition-delay: 200ms">
+        Hu&nbsp;<span style="color: #ffa500 !important">Kaixiang</span>
+        <!--
     <div class="typing-container">
       <span id="typing-container-text"></span>
       <span class="input-cursor"></span>
     </div>
     -->
-  </h1>
-    <!-- <h2 class="hidden" style="transition-delay: 400ms;">WEB&nbsp;DEVELOPMENT, SOFTWARE&nbsp;ENGINEERING</h2> -->
-    <h2 class="hidden" style="transition-delay: 400ms;">CODE&nbsp;ENTHUSIAST, <br/>HIGHSCHOOL&nbsp;STUDENT</h2>
-    <p class="hidden" style="transition-delay: 600ms;">Age <span id="myAge">14</span></p>
-    <section id="socials">
-      <a class="hidden" href="https://github.com/Maxhu787" target="_blank"><i
-          class="fa-brands fa-square-github"></i></a>
-      <a class="hidden" href="https://www.instagram.com/hukaixiang0207/" target="_blank"><i
-          class="fa-brands fa-square-instagram"></i></a>
-      <a class="hidden" href="https://www.facebook.com/profile.php?id=100075737822439" target="_blank"><i
-          class="fa-brands fa-square-facebook"></i></a>
-      <a class="hidden" href="https://twitter.com/hu_kaixiang" target="_blank"><i
-          class="fa-brands fa-square-twitter"></i></a>
-      <a class="hidden" href="https://www.youtube.com/channel/UCWXyRHqr9zS5oqzmR2tVHtQ" target="_blank"><i
-          class="fa-brands fa-square-youtube"></i></a>
-      <a class="hidden" href="mailto:maxhu787@gmail.com"><i class="fa-solid fa-square-envelope"></i></a>
-      <a class="hidden" href="https://www.linkedin.com/in/hu-kaixiang/" target="_blank"><i
-          class="fa-brands fa-linkedin"></i></a>
-    </section>
-    <section id="programming-languages">
-      <img class="programming-language" src="./assets/svg/html5.svg" alt="html5">
-      <img class="programming-language" src="./assets/svg/css3.svg" alt="css3">
-      <img class="programming-language" src="./assets/svg/python.svg" alt="python">
-      <img class="programming-language" src="./assets/svg/php.svg" alt="php">
-      <img class="programming-language" src="./assets/svg/javascript.svg" alt="javascript">
-      <img class="programming-language" src="./assets/svg/typescript.svg" alt="typescript">
-      <img class="programming-language" src="./assets/svg/bootstrap.svg" alt="bootstrap">
-      <img class="programming-language" src="./assets/svg/react.svg" alt="reactjs">
-      <img class="programming-language" src="./assets/svg/electron.svg" alt="electron">
-      <img class="programming-language" src="./assets/svg/redux.svg" alt="redux">
-      <img class="programming-language" src="./assets/svg/graphql.svg" alt="graphql">
-      <img class="programming-language" src="./assets/svg/sass.svg" alt="sass">
-      <img class="programming-language" src="./assets/svg/jquery.svg" alt="jquery">
-      <img class="programming-language" src="./assets/svg/mysql.png" alt="mysql">
-      <img class="programming-language" src="./assets/svg/postgresql.svg" alt="postgresql">
-      <img class="programming-language" src="./assets/svg/mongodb.svg" alt="mongodb">
-      <img class="programming-language" src="./assets/svg/sqlite.svg" alt="sqlite">
-      <img class="programming-language" src="./assets/svg/nodejs.svg" alt="nodejs">
-      <img class="programming-language" src="./assets/svg/nginx.svg" alt="nginx">
-      <img class="programming-language" src="./assets/svg/github.svg" alt="github">
-      <img class="programming-language" src="./assets/svg/nextjs.svg" alt="nextjs">
-      <img class="programming-language" src="./assets/svg/bash.svg" alt="bash">
-      <img class="programming-language" src="./assets/svg/git.png" alt="git">
-      <img class="programming-language" src="./assets/svg/c.svg" alt="c">
-      <img class="programming-language" src="./assets/svg/cpp.svg" alt="c++">
-      <img class="programming-language" src="./assets/svg/vscode.svg" alt="vscode">
-      <img class="programming-language" src="./assets/svg/d3.svg" alt="d3.js">
-      <img class="programming-language" src="./assets/svg/threejs.svg" alt="threejs">
-    </section>
-  </header>
-  <main>
-    <section class="projects cert-grid">
-      <h2>Certificates</h2>
-      <div class="cert-grid-container">
-        <div class="cert-hidden">
-          <img src="./assets//images/GEPT/GEPT-intermediate.jpg">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/GEPT/GEPT-elementary.jpg">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/STUF Coding/CERTIFICATE OF PARTICIPATION group 7-9.png">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/freecodecamp/Responsive Web Design.PNG">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/freecodecamp/JavaScript Algorithms and Data Structures.PNG">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/freecodecamp/Front End Development Libraries.PNG">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/freecodecamp/Scientific Computing with Python.PNG">
-        </div>
+      </h1>
+      <!-- <h2 class="hidden" style="transition-delay: 400ms;">WEB&nbsp;DEVELOPMENT, SOFTWARE&nbsp;ENGINEERING</h2> -->
+      <h2 class="hidden" style="transition-delay: 400ms">
+        CODE&nbsp;ENTHUSIAST, <br />HIGHSCHOOL&nbsp;STUDENT
+      </h2>
+      <p class="hidden" style="transition-delay: 600ms">
+        Age <span id="myAge">14</span>
+      </p>
+      <section id="socials">
+        <a class="hidden" href="https://github.com/Maxhu787" target="_blank"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+        <a
+          class="hidden"
+          href="https://www.instagram.com/hukaixiang0207/"
+          target="_blank"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a
+          class="hidden"
+          href="https://www.facebook.com/profile.php?id=100075737822439"
+          target="_blank"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+        <a class="hidden" href="https://twitter.com/hu_kaixiang" target="_blank"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+        <a
+          class="hidden"
+          href="https://www.youtube.com/channel/UCWXyRHqr9zS5oqzmR2tVHtQ"
+          target="_blank"
+          ><i class="fa-brands fa-square-youtube"></i
+        ></a>
+        <a class="hidden" href="mailto:maxhu787@gmail.com"
+          ><i class="fa-solid fa-square-envelope"></i
+        ></a>
+        <a
+          class="hidden"
+          href="https://www.linkedin.com/in/hu-kaixiang/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </section>
+      <section id="programming-languages">
+        <img
+          class="programming-language"
+          src="./assets/svg/html5.svg"
+          alt="html5"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/css3.svg"
+          alt="css3"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/python.svg"
+          alt="python"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/php.svg"
+          alt="php"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/javascript.svg"
+          alt="javascript"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/typescript.svg"
+          alt="typescript"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/bootstrap.svg"
+          alt="bootstrap"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/react.svg"
+          alt="reactjs"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/electron.svg"
+          alt="electron"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/redux.svg"
+          alt="redux"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/graphql.svg"
+          alt="graphql"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/sass.svg"
+          alt="sass"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/jquery.svg"
+          alt="jquery"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/mysql.png"
+          alt="mysql"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/postgresql.svg"
+          alt="postgresql"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/mongodb.svg"
+          alt="mongodb"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/sqlite.svg"
+          alt="sqlite"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/nodejs.svg"
+          alt="nodejs"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/nginx.svg"
+          alt="nginx"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/github.svg"
+          alt="github"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/nextjs.svg"
+          alt="nextjs"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/bash.svg"
+          alt="bash"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/git.png"
+          alt="git"
+        />
+        <img class="programming-language" src="./assets/svg/c.svg" alt="c" />
+        <img
+          class="programming-language"
+          src="./assets/svg/cpp.svg"
+          alt="c++"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/vscode.svg"
+          alt="vscode"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/d3.svg"
+          alt="d3.js"
+        />
+        <img
+          class="programming-language"
+          src="./assets/svg/threejs.svg"
+          alt="threejs"
+        />
+      </section>
+    </header>
+    <main>
+      <section class="projects cert-grid">
+        <h2>Certificates</h2>
+        <div class="cert-grid-container">
+          <div class="cert-hidden">
+            <img src="./assets//images/GEPT/GEPT-intermediate.jpg" />
+          </div>
+          <div class="cert-hidden">
+            <img src="./assets/images/GEPT/GEPT-elementary.jpg" />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/STUF Coding/CERTIFICATE OF PARTICIPATION group 7-9.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img src="./assets/images/freecodecamp/Responsive Web Design.PNG" />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/freecodecamp/JavaScript Algorithms and Data Structures.PNG"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/freecodecamp/Front End Development Libraries.PNG"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/freecodecamp/Scientific Computing with Python.PNG"
+            />
+          </div>
 
-        <div class="cert-hidden">
-          <img src="./assets/images/HackerRank/css certificate.png">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/HackerRank/sql_basic certificate.png">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/HackerRank/sql_intermediate certificate.png">
-        </div>
+          <div class="cert-hidden">
+            <img src="./assets/images/HackerRank/css certificate.png" />
+          </div>
+          <div class="cert-hidden">
+            <img src="./assets/images/HackerRank/sql_basic certificate.png" />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/HackerRank/sql_intermediate certificate.png"
+            />
+          </div>
 
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/Web Applications for Everybody Specialization/Web Applications for Everybody TZ9KQ68D8WM2.png">
-        </div>
-        <!--
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/Web Applications for Everybody Specialization/Web Applications for Everybody TZ9KQ68D8WM2.png"
+            />
+          </div>
+          <!--
         <div class="cert-hidden">
           <img
             src="./assets/images/Coursera/Specialization/Web Applications for Everybody Specialization/Building Web Applications in PHP S8ZZARE3JFAT.png">
@@ -174,11 +342,12 @@
         </div>
         -->
 
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/Web Design for Everybody Basics of Web Development & Coding Specialization/Web Design for Everybody Basics of Web Development & Coding EKGG6XLL58GT.png">
-        </div>
-        <!--
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/Web Design for Everybody Basics of Web Development & Coding Specialization/Web Design for Everybody Basics of Web Development & Coding EKGG6XLL58GT.png"
+            />
+          </div>
+          <!--
         <div class="cert-hidden">
           <img
             src="./assets/images/Coursera/Specialization/Web Design for Everybody Basics of Web Development & Coding Specialization/Introduction to HTML5 679CBAGJFGQ7.png">
@@ -197,69 +366,84 @@
         </div>
         -->
 
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Programming for Everybody (Getting Started with Python) TQG7SEF4TVPD.png">
-        </div>
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Python Data Structures BNU6UEXGRCLJ.png">
-        </div>
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Using Python to Access Web Data 5RNJG4W3J4KX.png">
-        </div>
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Using Databases with Python 6SPRM5T27HSV.png">
-        </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Programming for Everybody (Getting Started with Python) TQG7SEF4TVPD.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Python Data Structures BNU6UEXGRCLJ.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Using Python to Access Web Data 5RNJG4W3J4KX.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/Python for Everybody Specialization/Using Databases with Python 6SPRM5T27HSV.png"
+            />
+          </div>
 
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Specialization/PostgreSQL for Everybody Specialization/Database Design and Basic SQL in PostgreSQL Y3675EDD8CCS.png">
-        </div>
-        <!--
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Specialization/PostgreSQL for Everybody Specialization/Database Design and Basic SQL in PostgreSQL Y3675EDD8CCS.png"
+            />
+          </div>
+          <!--
         <div class="cert-hidden">
           <img
             src="./assets/images/Coursera/Specialization/Django for Everybody Specialization/Web Application Technologies and Django 48YRS3EWQZDT.png">
         </div>-->
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Certificate/other/Internet History, Technology, and Security WRAM2LN5LR4T.png">
-        </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/Coursera/Certificate/other/Getting Started with Git and GitHub YGW2H9R4EV6D.png">
-        </div>
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Certificate/Meta Front-End Developer Professional Certificate/Introduction to Front-End Development RAQH3RWLXQLK.png">
-        </div>
-        <div class="cert-hidden">
-          <img
-            src="./assets/images/Coursera/Certificate/Meta Back-End Developer Professional Certificate/Introduction to Back-End Development 6V9CTR9JRY2Y.png">
-        </div>
-        <!--
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Certificate/other/Internet History, Technology, and Security WRAM2LN5LR4T.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Certificate/other/Getting Started with Git and GitHub YGW2H9R4EV6D.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Certificate/Meta Front-End Developer Professional Certificate/Introduction to Front-End Development RAQH3RWLXQLK.png"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/Coursera/Certificate/Meta Back-End Developer Professional Certificate/Introduction to Back-End Development 6V9CTR9JRY2Y.png"
+            />
+          </div>
+          <!--
         <div class="cert-hidden">
           <img src="./assets/images/Coursera/Certificate/other/SQL for Data Science 5FKC8HPTMLK4.png">
         </div>
         -->
-        <div class="cert-hidden">
-          <img src="./assets/images/Kaggle/Python.png">
-        </div>
+          <div class="cert-hidden">
+            <img src="./assets/images/Kaggle/Python.png" />
+          </div>
 
-        <div class="cert-hidden">
-          <img src="./assets/images/mygreatlearning.com/Introduction to Machine Learning US.jpg">
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/mygreatlearning.com/Introduction to Machine Learning US.jpg"
+            />
+          </div>
+          <div class="cert-hidden">
+            <img
+              src="./assets/images/mygreatlearning.com/Serverless Computing.jpg"
+            />
+          </div>
         </div>
-        <div class="cert-hidden">
-          <img src="./assets/images/mygreatlearning.com/Serverless Computing.jpg">
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; <span id="year">2023</span> Hu Kaixiang. All rights reserved.</p>
-    <a href="https://github.com/Maxhu787">github.com/Maxhu787</a>
-  </footer>
-</body>
-
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; <span id="year">2023</span> Hu Kaixiang. All rights reserved.
+      </p>
+      <!-- <a href="https://github.com/Maxhu787">github.com/Maxhu787</a> -->
+    </footer>
+  </body>
 </html>

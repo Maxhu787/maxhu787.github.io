@@ -101,6 +101,22 @@ body {
   margin-right: 40px;
   margin-top: 14px;
   border: 7px solid var(--secondary);
+  animation: logo-breath 3s ease-out infinite normal;
+}
+
+@keyframes logo-breath {
+  0% {
+    transform: scale(0.95);
+  }
+  25% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.95);
+  }
 }
 
 @media (min-width: 1900px) {
@@ -228,7 +244,7 @@ body {
 }
 
 .cert-grid {
-  padding: 20px 80px 20px 80px;
+  padding: 40px 140px 40px 140px;
 }
 
 .cert-grid h2 {
@@ -269,7 +285,7 @@ body {
 }
 
 .cert-grid-container img:hover {
-  transform: scale(0.95);
+  /* transform: scale(0.95); */
 }
 
 .cert-hidden {

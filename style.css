@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@700&family=Manrope&family=Orbitron&family=Noto+Sans&display=swap");
 
 :root {
-  --light: #000;
+  /* --light: #000;
   --dark: #fff;
   --background: #000;
   --primary: #ffc200;
   --secondary: #ffc200;
+  --placeholder-text: #888; */
+
+  --light: #fff;
+  --dark: #000;
+  --background: #fff;
+  --primary: #009dff;
+  --secondary: #96d7ff;
   --placeholder-text: #888;
 }
 
@@ -81,6 +88,10 @@ body {
   vertical-align: top;
   font-size: 40px;
   font-family: "Manrope";
+}
+
+#header h1 span {
+  color: var(--primary);
 }
 
 #header h2 {

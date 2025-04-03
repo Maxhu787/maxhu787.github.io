@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Moderustic:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Moderustic";
+  background-color: #010e19;
+  /* background-color: rgb(10, 10, 10); */
+  /* background: url("https://github.com/Maxhu787/g4o2-website/blob/main/media/0000001.jpg?raw=true")
+          no-repeat center center fixed;
+        background-size: cover; */
+  color: #fff;
+  display: flex;
+  height: 100vh;
+  opacity: 0;
+
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+  height: 100vh;
+}
+
+#left {
+  padding: 60px 90px;
+  box-sizing: border-box;
+}
+
+#left h1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Manrope";
+  color: #3b81f6;
+}
+
+#eee {
+  margin-top: -25px;
+  font-size: 20px;
+}
+
+#fff {
+  color: rgb(211, 211, 211);
+  font-size: 16px;
+}
+
+#country {
+  font-family: "Raleway";
+  font-weight: 700;
+  color: #d4d4d4;
+}
+
+#country span {
+  font-size: 20px;
+}
+
+#footer {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: left;
+  color: #d4d4d4;
+}
+
+#right {
+  overflow-y: auto;
+  padding: 60px 90px;
+  box-sizing: border-box;
+  /* background-color: red; */
+  backdrop-filter: blur(10px);
+}
+
+#languages .grid {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+}
+
+#languages .language {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#languages .language img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+#languages .language .name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#projects .item {
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#projects .item img {
+  width: 120px;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+#projects .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#projects .title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#projects .description {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+#certifications .item {
+  margin-top: 10px;
+  font-size: 18px;
+  padding: 12px 8px;
+}
+
+#timeline .item {
+  justify-content: space-between;
+  padding: 30px 40px;
+  position: relative;
+}
+
+#timeline .timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+#timeline .timeline-year {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#timeline .timeline-school {
+  font-size: 14px;
+  color: #aaa;
+}
+
+#timeline .item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #92b9fd;
+  z-index: 2;
+}
+
+#timeline .timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #92b9fd;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#blog .item {
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#blog .item img {
+  width: 115px;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.blog-date {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.blog-description {
+  color: #e3e3e3;
+}
+
+#socials {
+  user-select: none;
+}
+
+#socials a {
+  color: #fff;
+  font-size: 38px;
+  display: inline-block;
+  padding: 20px 10px;
+  text-decoration: none;
+
+  transition: all 1s ease-in-out;
+}
+
+#socials a:hover {
+  color: #3b81f6;
+  /* color: #009dff; */
+  transition: color 0.1s ease-in-out;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #3b81f6;
+  padding-bottom: 5px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  background-color: #121b26;
+  border-radius: 8px;
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: #1e2a38 !important;
+}
+
+@media (max-width: 800px) {
+  .half {
+    width: 100%;
+    height: auto;
+  }
+
+  #left {
+    padding: 60px 40px;
+  }
+
+  #right {
+    padding: 40px 40px;
+    overflow: visible;
+    height: auto;
+  }
+
+  #container {
+    flex-direction: column;
+  }
+
+  #left h1 {
+    font-size: 45px;
+  }
+}

@@ -1,4 +1,11 @@
-# hu-kaixiang
+# hu-kai-hsiang
 
--make cert section one column when on mobile
-- add more margin profile pic bottom
+- add banner image
+- add fcc and coursera certs
+- add taransition
+- add course work
+
+https://chainedtears.dev/
+https://andrijaweb.vercel.app/
+
+camps & events

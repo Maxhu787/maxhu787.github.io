@@ -200,6 +200,7 @@ body {
   width: 115px;
   border-radius: 6px;
   margin-right: 15px;
+  max-height: 100px;
 }
 
 .blog-content {
@@ -220,6 +221,7 @@ body {
 
 .blog-description {
   color: #e3e3e3;
+  margin-top: 5px;
 }
 
 #socials {
@@ -256,6 +258,8 @@ body {
   transition: all 0.1s ease-in-out;
   background-color: #121b26;
   border-radius: 8px;
+  padding: 8px;
+  margin-top: 10px;
 }
 
 .item:hover {

@@ -143,7 +143,7 @@ body {
 }
 
 #timeline .item {
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 30px 40px;
   position: relative;
 }
@@ -200,7 +200,7 @@ body {
   width: 115px;
   border-radius: 6px;
   margin-right: 15px;
-  max-height: 100px;
+  /* max-height: 100px; */
 }
 
 .blog-content {
@@ -267,6 +267,41 @@ body {
   background-color: #1e2a38 !important;
 }
 
+.wave {
+  animation-name: wave-anim;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @media (max-width: 800px) {
   .half {
     width: 100%;
@@ -278,7 +313,7 @@ body {
   }
 
   #right {
-    padding: 40px 40px;
+    padding: 40px;
     overflow: visible;
     height: auto;
   }
@@ -289,5 +324,13 @@ body {
 
   #left h1 {
     font-size: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  #right {
+    padding: 20px;
+    overflow: visible;
+    height: auto;
   }
 }

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Moderustic:wght@300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 html {
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 22px;
 }
 
 body {
@@ -74,6 +75,7 @@ body {
 }
 
 #right {
+  /* background-color: green; */
   overflow-y: auto;
   padding: 3.75rem 5.625rem;
   box-sizing: border-box;
@@ -108,6 +110,7 @@ body {
 #projects .item {
   padding: 0.9375rem;
   margin-bottom: 0.9375rem;
+  /* position: relative; */
 }
 
 #projects .item img {
@@ -130,6 +133,14 @@ body {
   font-size: 0.875rem;
   color: #aaa;
   margin-top: 0.3125rem;
+}
+
+#projects .date {
+  font-size: 0.875rem;
+  color: #aaa;
+  /* position: absolute; */
+  /* bottom: 1rem;
+  right: 1rem; */
 }
 
 #certifications .item-hover-none {
@@ -301,7 +312,33 @@ body {
   }
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 90rem) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 95rem) {
+  #right {
+    /* background-color: yellow; */
+    padding: 3.75rem;
+  }
+}
+
+@media (max-width: 80rem) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 70rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* 50rem */
+@media (max-width: 55rem) {
   .half {
     width: 100%;
     height: auto;
@@ -312,6 +349,7 @@ body {
   }
 
   #right {
+    /* background-color: red; */
     padding: 2.5rem;
     overflow: visible;
     height: auto;
@@ -332,6 +370,7 @@ body {
 
 @media (max-width: 25rem) {
   #right {
+    /* background-color: blue; */
     padding: 1.25rem;
     overflow: visible;
     height: auto;
